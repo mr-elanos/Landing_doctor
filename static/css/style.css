@@ -503,9 +503,9 @@ body {
 }
 .steps__arrow {
   width: 18.75rem;
-  height: 6.25rem;
+  height: 5rem;
   align-self: flex-end;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .steps__arrow img {
   width: 100%;
