@@ -50,19 +50,17 @@ body {
 }
 
 .header {
-    background-image: url('../img/header.jpg');
-    background-position: center;
+    background-image: url('../img/header1.jpg');
     background-size: cover;
+    background-position: top;
     min-height: 100vh;
     &__nav {
         display: flex;
         width: 100%;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0px -rem(100);
+        padding: 0px -rem(20);
         &-img{
-            width: -rem(100);
-            height: -rem(100);
+            width: -rem(150);
+            height: -rem(150);
             & img{
                 width: 100%;
             }
@@ -72,16 +70,16 @@ body {
         display: flex;
     }
     &__li {
-        margin-right: -rem(40);
+        margin-right: -rem(30);
+        padding-top: -rem(35);
         &:last-child{
             margin-right: 10px
         }
         & a{
-            font-family: 'Merriweather', serif;
-            font-weight: 300;
+            font-weight: 400;
             color: #286270dc;
             text-transform: uppercase;
-            @include adaptiv-font(12, 8);
+            @include adaptiv-font(12, 7);
             &:hover{
                 color: #28627086;
             }
@@ -91,7 +89,7 @@ body {
         width: 45%;
         display: flex;
         align-items: center;
-        padding-top: -rem(90);
+        padding-top: -rem(40);
         margin: 0px 10% -rem(10) ;
     }
     &__title {
@@ -102,26 +100,27 @@ body {
         color: #00627bc9;
     }
     &__subtitle {
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
         margin-bottom: -rem(30);
         @include adaptiv-font(18, 14);
     }
     &__text {
-        font-weight: 200;
+        font-weight: 300;
         line-height: 1.4;
         margin-bottom: -rem(40);
-        @include adaptiv-font(16, 12);
+        @include adaptiv-font(16, 10);
         text-align: justify;
     }
     &__button {
+        line-height: 1.3;
         font-weight: 300;
         text-align: center;
-        background-color: #00627bc9;
         width: -rem(230);
-        padding: -rem(20) 0px;
+        padding: -rem(5) 0px;
         border-radius: -rem(25);
         margin: 0 auto;
+        background-color: #00627bc9;
         & a{
             color: #ffffff;
             @include adaptiv-font(15, 10);
@@ -335,17 +334,16 @@ body {
     background-color: #e2e1e7af;
     &__content {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         padding: 0px -rem(10) -rem(80);
     }
     &__content-left {
-        width: 50%;
+        width: 48%;
         align-self: flex-start;
         margin-bottom: -rem(30);
     }
     &__content-right {
-        width: 50%;
-        align-self: flex-end;
+        width: 48%;
     }
     &__title{
         @include adaptiv-font(22, 14);
@@ -475,6 +473,7 @@ body {
         width: 70%;
     }
     &__num {
+        font-family: 'Inconsolata', monospace;
         color: #8fb8e236;
         position: absolute;
         top: 0;
@@ -557,12 +556,14 @@ body {
     }
     &__after {
         margin: 0px -rem(200);
-        padding-bottom: -rem(50);
+        padding-bottom: -rem(5);
         text-align: center;
         color: #ffffff;
         font-weight: 500;
-        line-height: 1.5;
-        @include adaptiv-font(20, 14)
+        @include adaptiv-font(20, 14);
+        &-last{
+            padding-bottom: -rem(50);
+        }
     }
 }
 
@@ -656,28 +657,32 @@ body {
         justify-content: space-between;
         padding-bottom: -rem(10);
     }
-
     &__left {
         display: flex;
         flex-direction: column;
         margin: 0px -rem(10);
+        width: 30%;
     }
-
     &__title {
         color: #ffffff;
         @include adaptiv-font(18,  12);
         padding: -rem(30) 0px -rem(15);
         text-align: center;
     }
-
     &__ul {
         display: flex;
+        justify-content: center;
+        & li {
+            margin: 0px -rem(10);
+        }
         & a{
             color: #ffffff;
             display: flex;
             align-items: center;
-            margin-left: -rem(20);
-            @include adaptiv-font(12, 8)
+            @include adaptiv-font(12, 8);
+        }
+        &:first-child {
+            margin-left: 0px;
         }
         & img {
             width: -rem(25);
@@ -693,6 +698,7 @@ body {
         display: flex;
         flex-direction: column;
         margin: 0px -rem(10);
+        width: 30%;
     }
 }
 

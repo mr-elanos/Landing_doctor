@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./static/css/style.css">
     <title>Document</title>
 </head>
@@ -16,6 +16,11 @@
 <body>
     <header class="header">
         <nav class="header__nav">
+            <div class="header__nav-img">
+                <a href="#">
+                    <img src="./static/img/logo.png" alt="Home">
+                </a>
+            </div>
             <ul class="header__ul">
                 <li class="header__li"><a href="#spec">Спеціалізація</a></li>
                 <li class="header__li"><a href="#advantage">Мої переваги</a></li>
@@ -23,16 +28,11 @@
                 <li class="header__li"><a href="#quations">Важливі питання</a></li>
                 <li class="header__li"><a href="#contacts">Контакти</a></li>
             </ul>
-            <div class="header__nav-img">
-                <a href="#">
-                    <img src="./static/img/logo.png" alt="Home">
-                </a>
-            </div>
         </nav>
         <div class="header__block">
             <div class="header__content">
                 <h1 class="header__title">Владислав Плєхов</h1>
-                <h2 class="header__subtitle">Доказова психіатрія та психотерапія.</h2>
+                <h2 class="header__subtitle">Доказова психіатрія та психотерапія</h2>
                 <p class="header__text">Вітаю! Я – твій спеціаліст з психічного здоров’я, лікар-психіатр,
                     психотерапевт.
                     Постійно покращую свій кваліфікаційний рівень на різноманітних тренінгах та ділюсь своїм
@@ -43,7 +43,7 @@
                     особистості, психічних порушеннях похилого віку, хімічних та нехімічних залежностях.
                 </p>
                 <div class="header__button">
-                    <a href="#contacts">Записатись на прийом</a>
+                    <a href="#contacts">Записатися<br> на консультцію</a>
                 </div>
             </div>
         </div>
@@ -281,16 +281,18 @@
         </div>
         <div class="faq">
             <div class="faq__container" id="quations">
-                <h2 class="faq__title">Інші важливі питання:</h2>
+                <h2 class="faq__title">Інші важливі питання</h2>
                 <div class="faq__content">
                     <ul class="faq__ul">
-                        <li class="faq__li">Тривалість консультації: 60 хв. </li>
+                        <li class="faq__li">Тривалість консультації: до 60 хв. </li>
                         <li class="faq__li">Мова консультацій: українська, англійська та російська</li>
                         <li class="faq__li">Між психотерапевтичними зустрічами ми завжди зберігаємо зв’язок (у Telegram або
                             Viber), аби Ви мали можливість задати нагальні питання</li>
                     </ul>
                 </div>
-                <p class="faq__after">Всі консультації є виключно анонімними. Розголошення деталей співпраці та особливостей
+                <p class="faq__after">Всі консультації є виключно анонімними. 
+                </p>
+                <p class="faq__after faq__after-last">Розголошення деталей співпраці та особливостей
                     терапії третім особам НЕ можливе!
                 </p>
             </div>
@@ -329,7 +331,7 @@
         <div class="container">
             <div class="footer__content">
                 <div class="footer__left">
-                    <p class="footer__title">Зв'язок:</p>
+                    <p class="footer__title">Зв'язок</p>
                     <ul class="footer__ul">
                         <li><a href="viber://chat?number=%2B380984938492"><img src="./static/img/viber.png" alt=""><span>Viber</span></a></li>
                         <li><a href="https://wa.me/380984938492"><img src="./static/img/whatsapp.png" alt=""><span>WhatsApp</span></a></li>
@@ -337,7 +339,7 @@
                     </ul>
                 </div>
                 <div class="footer__right">
-                    <p class="footer__title">Соцмережи:</p>
+                    <p class="footer__title">Я в соціальних мережах</p>
                     <ul class="footer__ul">
                         <li><a href="https://instagram.com/dr_plekhov?igshid=YWJhMjlhZTc="><img src="./static/img/insta.png" alt=""><span>Instagram</span></a></li>
                         <li><a href="https://www.tiktok.com/@vladpliekhov"><img src="./static/img/tictok.png" alt=""><span>Tik Tok</span></a></li>
