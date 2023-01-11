@@ -502,7 +502,7 @@ body {
   width: 65%;
 }
 .steps__arrow {
-  width: 18.75rem;
+  width: 15.625rem;
   height: 5rem;
   align-self: flex-end;
   opacity: 0.2;
