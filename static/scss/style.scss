@@ -467,10 +467,12 @@ body {
     &__item-right {
         margin: 0px -rem(10) -rem(10) 0px;
         width: 70%;
+        min-height: -rem(170);
     }
     &__item-left {
         margin: 0px 0px -rem(10) -rem(10);
         width: 70%;
+        min-height: -rem(170);
     }
     &__num {
         font-family: 'Inconsolata', monospace;

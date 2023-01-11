@@ -524,10 +524,12 @@ body {
 .steps__item-right {
   margin: 0px 0.625rem 0.625rem 0px;
   width: 70%;
+  min-height: 10.625rem;
 }
 .steps__item-left {
   margin: 0px 0px 0.625rem 0.625rem;
   width: 70%;
+  min-height: 10.625rem;
 }
 .steps__num {
   font-family: "Inconsolata", monospace;
