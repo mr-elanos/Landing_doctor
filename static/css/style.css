@@ -93,18 +93,26 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 60px;
   }
 }
-.container {
-  max-width: 73.75rem;
-  margin: 0px auto;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  color: #42433c;
+  color: #171930;
+}
+
+.container {
+  max-width: 73.75rem;
+  margin: 0px auto;
+}
+
+.title {
+  font-size: calc(18px + 10 * ((100vw - 320px) / 960));
+  line-height: 1.4;
+  font-weight: 500;
+  text-align: center;
+  padding: 3.75rem 0.625rem 3.125rem;
 }
 
 .header {
@@ -198,11 +206,6 @@ body {
 }
 .spec__title {
   color: white;
-  font-size: calc(18px + 10 * ((100vw - 320px) / 960));
-  text-align: center;
-  margin: 5rem 0px 3.75rem;
-  line-height: 1.4;
-  font-weight: 500;
 }
 .spec__tab {
   margin: 0px 0.625rem;
@@ -295,10 +298,6 @@ body {
   margin-top: 4.375rem;
 }
 .education__title {
-  text-align: center;
-  margin: 5rem 0px 3.125rem;
-  font-size: calc(14px + 14 * ((100vw - 320px) / 960));
-  font-weight: 500;
   color: rgba(0, 98, 123, 0.7882352941);
 }
 .education__content-item {
@@ -425,10 +424,6 @@ body {
   background-color: rgba(0, 98, 123, 0.7882352941);
 }
 .advantage__title {
-  padding: 5rem 0.625rem 5rem;
-  font-size: calc(16px + 10 * ((100vw - 320px) / 960));
-  font-weight: 500;
-  text-align: center;
   color: #ffffff;
 }
 .advantage__cards {
@@ -483,10 +478,6 @@ body {
   width: 100%;
 }
 .steps__title {
-  padding: 5rem 0.625rem 5rem;
-  font-size: calc(16px + 10 * ((100vw - 320px) / 960));
-  font-weight: 500;
-  text-align: center;
   color: rgba(0, 98, 123, 0.7882352941);
 }
 .steps__step-left {
@@ -549,10 +540,6 @@ body {
   background-color: rgba(0, 98, 123, 0.7882352941);
 }
 .faq__title {
-  padding: 5rem 0.625rem 3.125rem;
-  font-size: calc(16px + 10 * ((100vw - 320px) / 960));
-  font-weight: 500;
-  text-align: center;
   color: #ffffff;
 }
 .faq__content {
@@ -625,10 +612,6 @@ body {
   background-color: rgba(226, 225, 231, 0.6862745098);
 }
 .contacts__title {
-  text-align: center;
-  padding: 4.375rem 0px 3.125rem;
-  font-size: calc(14px + 14 * ((100vw - 320px) / 960));
-  font-weight: 500;
   color: rgba(0, 98, 123, 0.7882352941);
 }
 .contacts__container {
@@ -685,7 +668,7 @@ body {
   background-color: rgba(35, 155, 185, 0.0745098039);
 }
 .contacts__form-text {
-  padding-bottom: 5.3125rem;
+  height: 6.25rem;
 }
 .contacts__form-radio {
   margin-bottom: 0.9375rem;
@@ -712,7 +695,7 @@ body {
   background-color: rgba(0, 98, 123, 0.4039215686);
 }
 .contacts__img {
-  margin-bottom: 3.4375rem;
+  margin-bottom: 6.25rem;
 }
 .contacts__number {
   display: flex;

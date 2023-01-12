@@ -35,18 +35,26 @@ $maxWidth: 1280;
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #171930;
+}
+
 .container {
     max-width: -rem(1180);
     margin: 0px auto;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: #42433c;
-    
+.title{
+    @include adaptiv-font(28, 18);
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+    padding: -rem(60) -rem(10) -rem(50);
 }
 
 .header {
@@ -139,11 +147,6 @@ body {
     background-color: #00627bc9;
     &__title{
         color: white;
-        @include adaptiv-font(28, 18);
-        text-align: center;
-        margin: -rem(80) 0px -rem(60);
-        line-height: 1.4;
-        font-weight: 500;
     }
     &__tab {
         margin: 0px -rem(10);
@@ -236,10 +239,6 @@ body {
         margin-top: -rem(70);
     }
     &__title {
-        text-align: center;
-        margin: -rem(80) 0px -rem(50);
-        @include adaptiv-font(28, 14);
-        font-weight: 500;
         color: #00627bc9;
     }    
     &__content-item {
@@ -367,10 +366,6 @@ body {
 .advantage {
     background-color: #00627bc9;
     &__title {
-        padding: -rem(80) -rem(10) -rem(80);
-        @include adaptiv-font(26, 16);
-        font-weight: 500;
-        text-align: center;
         color: #ffffff;
     }
     &__cards {
@@ -426,10 +421,6 @@ body {
         width: 100%;
     }
     &__title {
-        padding: -rem(80) -rem(10) -rem(80);
-        @include adaptiv-font(26, 16);
-        font-weight: 500;
-        text-align: center;
         color: #00627bc9;
     }
     &__step{
@@ -495,10 +486,6 @@ body {
 .faq {
     background-color: #00627bc9;
     &__title {
-        padding: -rem(80) -rem(10) -rem(50);
-        @include adaptiv-font(26, 16);
-        font-weight: 500;
-        text-align: center;
         color: #ffffff;
     }
     &__content {
@@ -571,10 +558,6 @@ body {
 .contacts {
     background-color: #e2e1e7af;
     &__title {
-        text-align: center;
-        padding: -rem(70) 0px -rem(50);
-        @include adaptiv-font(28, 14);
-        font-weight: 500;
         color: #00627bc9;
     }
     &__container{
@@ -625,7 +608,7 @@ body {
         }
     }
     &__form-text {
-        padding-bottom:-rem(85);
+        height: -rem(100);
     }
     &__form-radio{
         margin-bottom: -rem(15);
@@ -652,7 +635,7 @@ body {
         }
     }
     &__img {
-        margin-bottom: -rem(55);
+        margin-bottom: -rem(100);
     }
     &__number {
         display: flex;
