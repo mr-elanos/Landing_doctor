@@ -88,6 +88,7 @@ body {
         &-img{
             width: -rem(150);
             height: -rem(150);
+            margin-right: -rem(20);
             & img{
                 width: 100%;
             }
@@ -103,10 +104,9 @@ body {
             margin-right: 10px
         }
         & a{
-            font-weight: 400;
+            font-weight: 500;
             color: #286270dc;
-            text-transform: uppercase;
-            @include adaptiv-font(12, 7);
+            @include adaptiv-font(14, 8);
             transition: all 0.2s linear;
             &:hover{
                 color: #28627086;
@@ -137,7 +137,7 @@ body {
         font-weight: 400;
         line-height: 1.3;
         margin-bottom: -rem(40);
-        @include adaptiv-font(16, 12);
+        @include adaptiv-font(16, 14);
         text-align: justify;
     }
     &__button {
@@ -151,11 +151,11 @@ body {
         border-radius: -rem(25);
         padding: -rem(10);
         margin: 10px auto;
-        background-color: #00627bc9;
+        background-color: #00627bfe;
         transition: all 0.3s linear;
         & a{
             color: #ffffff;
-            @include adaptiv-font(16, 12);
+            @include adaptiv-font(16, 14)
         }
         &:hover{
             cursor: pointer;
@@ -184,6 +184,13 @@ body {
         &__fone img{
             object-position: right;
         }
+        
+    }
+}
+@media (max-width: 767px){
+    .header__button a{
+        @include adaptiv-font(28, 17);
+        font-weight: 500;
     }
 }
 
@@ -252,7 +259,7 @@ body {
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 12);
         line-height: 1.6;
         font-weight: 400;
         &::before{
@@ -347,7 +354,7 @@ body {
     }
     &__content-text {
         text-align: center;
-        @include adaptiv-font(16, 12);
+        @include adaptiv-font(16, 14);
         font-weight: 300;
         transition: all 0.1s linear;
         &:hover{
@@ -443,7 +450,7 @@ body {
         color: #00627bc9; 
     }
     &__text{
-        @include adaptiv-font(14, 12);
+        @include adaptiv-font(16, 14);
         line-height: 1.7;
         font-weight: 300;
         text-align: justify;
@@ -501,13 +508,13 @@ body {
         }
     }
     &__card-title {
-        @include adaptiv-font(18, 14);
+        @include adaptiv-font(18, 16);
         font-weight: 500;
         margin: 0px -rem(10) -rem(20);
         color: #00627bc9;
     }
     &__card-text {
-        @include adaptiv-font(14, 12);
+        @include adaptiv-font(16, 14);
         font-weight: 300;
         line-height: 1.5;
         text-align: center;
@@ -574,12 +581,12 @@ body {
     }
     &__item-right {
         margin: 0px -rem(10) -rem(10) 0px;
-        height: -rem(170);
+        min-height: -rem(170);
         width: 50%;
     }
     &__item-left {
         margin: 0px 0px -rem(10) -rem(10);
-        height: -rem(170);
+        min-height: -rem(170);
         width: 50%;
     }
     
@@ -593,7 +600,7 @@ body {
         @include adaptiv-font(70, 50);
     }
     &__text {
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 12);
         font-weight: 300;
         text-align: center;
         line-height: 1.4;
@@ -815,6 +822,10 @@ body {
         &__img {
             width: 250px;
             margin: 40px 0px 20px;
+        }
+        &__button {
+            font-weight: 500;
+            @include adaptiv-font(28, 17);
         }
     }
 }
