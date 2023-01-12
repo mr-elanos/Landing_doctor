@@ -176,8 +176,6 @@ body {
             width: 80%;
             margin: 0 auto;
             align-self: center;
-            
-            
 		}
         &__text{
             margin-bottom: 60px;
@@ -195,6 +193,7 @@ body {
     background-color: #00627bc9;
     &__title{
         color: white;
+        max-width: -rem(700);
     }
     &__tab {
         margin: 0px -rem(10);

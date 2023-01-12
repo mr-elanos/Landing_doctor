@@ -253,6 +253,7 @@ body {
 }
 .spec__title {
   color: white;
+  max-width: 43.75rem;
 }
 .spec__tab {
   margin: 0px 0.625rem;
