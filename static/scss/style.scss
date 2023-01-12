@@ -56,12 +56,32 @@ body {
     text-align: center;
     padding: -rem(60) -rem(10) -rem(50);
 }
+@media(max-width: 767px){
+    .title{
+        padding: -rem(40) -rem(10) -rem(25);
+    }
+}
+
 
 .header {
-    background-image: url('../img/header1.jpg');
-    background-size: cover;
-    background-position: top;
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
+    &__fone{
+        width:100%;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        overflow: hidden;
+        & img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            height: 100%;
+            
+        }
+    }
     &__nav {
         display: flex;
         width: 100%;
@@ -97,8 +117,8 @@ body {
         width: 45%;
         display: flex;
         align-items: center;
-        padding-top: -rem(40);
-        margin: 0px 10% -rem(10) ;
+        padding-top: -rem(30);
+        margin: 0px 10%  ;
     }
     &__title {
         text-align: center;
@@ -127,7 +147,7 @@ body {
         width: -rem(230);
         padding: -rem(5) 0px;
         border-radius: -rem(25);
-        margin: 0 auto;
+        margin: 10px auto;
         background-color: #00627bc9;
         & a{
             color: #ffffff;
@@ -136,6 +156,32 @@ body {
         &:hover{
             cursor: pointer;
             background-color: #00627b48;
+        }
+    }
+}
+
+@media (max-width: 1023px){
+    .header {
+        background-image: none;
+        background-color: #e2e1e7b9;
+		&__nav-img {
+            width: 100px;
+		}
+		&__ul {
+            display: none;
+		}
+		&__block {
+            width: 80%;
+            margin: 0 auto;
+            align-self: center;
+            
+            
+		}
+        &__text{
+            margin-bottom: 60px;
+        }
+        &__fone img{
+            object-position: right;
         }
     }
 }
@@ -180,9 +226,9 @@ body {
     }
     &__tab-title {
         color: white;
-        @include adaptiv-font(20, 14);
+        @include adaptiv-font(20, 12);
         margin: -rem(20) 0px;
-        width: 60vw;
+        width: 56vw;
         position: relative;
         font-weight: 400;
         &:hover{
@@ -204,7 +250,7 @@ body {
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 8);
         line-height: 1.6;
         font-weight: 400;
         &::before{
@@ -223,6 +269,16 @@ body {
 }
 .down {
     transform: rotate(45deg);
+}
+@media(max-width: 767px){
+    .spec {
+        &__tab-title {
+            width: 95vw;
+        }
+        &__tab:last-child::after{
+        margin-bottom: 40px;
+        }
+    }
 }
 
 .education {
@@ -328,6 +384,37 @@ body {
 .hidden{
     display: none;
 }
+@media(max-width: 767px){
+    .education {
+        &::after{
+            margin-top: 0px;
+        }
+        &__content-item{
+            grid-template-columns: auto 1fr;
+            
+            &::after{
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+        }
+        &__content-text-1, &__content-text-3, &__content-text-5, &__content-text-2, &__content-text-4, &__content-text-6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        &__content-text-1, &__content-text-3, &__content-text-5{
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        &__content-year {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    }
+}
 
 .qualification {
     background-color: #e2e1e7af;
@@ -338,7 +425,6 @@ body {
     }
     &__content-left {
         width: 48%;
-        align-self: flex-start;
         margin-bottom: -rem(30);
     }
     &__content-right {
@@ -360,6 +446,19 @@ body {
         background-color: #ffffff;
         border-radius: 10%;
         box-shadow: -rem(8) -rem(8) -rem(5) -rem(-5) #053c4986;
+    }
+}
+@media(max-width: 767px){
+    .qualification{
+        &__content{
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+        &__content-left,  &__content-right{
+            width: 80%;
+            margin-bottom: -rem(20);
+        }
     }
 }
 
@@ -398,13 +497,24 @@ body {
         margin: 0px -rem(10) -rem(20);
         color: #00627bc9;
     }
-
     &__card-text {
         @include adaptiv-font(14, 10);
         font-weight: 300;
         line-height: 1.5;
         text-align: center;
         padding: 0px -rem(20) -rem(100);
+    }
+}
+@media(max-width: 767px){
+    .advantage {
+        &__cards{
+            grid-template-columns: 1fr;
+            margin: 0px 18%;
+            padding-bottom: -rem(30);
+        }
+        &__card-text{
+            padding: 0px -rem(20) -rem(80);
+        }
     }
 }
 
@@ -434,8 +544,8 @@ body {
         }
     }
     &__arrow{
-        width: -rem(250);
-        height: -rem(70);
+        width: 25%;
+        max-height: -rem(70);
         align-self: flex-end;
         justify-self: flex-end;
         opacity: 0.7;
@@ -455,12 +565,12 @@ body {
     }
     &__item-right {
         margin: 0px -rem(10) -rem(10) 0px;
-        min-height: -rem(170);
+        height: -rem(170);
         width: 50%;
     }
     &__item-left {
         margin: 0px 0px -rem(10) -rem(10);
-        min-height: -rem(170);
+        height: -rem(170);
         width: 50%;
     }
     
@@ -474,12 +584,17 @@ body {
         @include adaptiv-font(70, 40);
     }
     &__text {
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 8);
         font-weight: 300;
         text-align: center;
         line-height: 1.4;
         width: 67%;
         padding: -rem(30) 0px;
+    }
+}
+@media(max-width: 767px){
+    .steps__content{
+        padding-bottom: -rem(30);
     }
 }
 
@@ -495,6 +610,7 @@ body {
     &__li {
         position: relative;
         text-align: center;
+        @include adaptiv-font(16, 10);
         line-height: 1.5;
         font-weight: 300;
         border: -rem(2) solid #DDDDDD;
@@ -543,15 +659,20 @@ body {
         }
     }
     &__after {
-        margin: 0px -rem(200);
+        margin: 0px -rem(10);
         padding-bottom: -rem(5);
         text-align: center;
         color: #ffffff;
         font-weight: 500;
-        @include adaptiv-font(20, 14);
+        @include adaptiv-font(18, 12);
         &-last{
             padding-bottom: -rem(50);
         }
+    }
+}
+@media(max-width: 767px){
+    .faq__after-last{
+        padding-bottom: -rem(30);
     }
 }
 
@@ -592,6 +713,9 @@ body {
         & input::placeholder{
             @include adaptiv-font(12, 8);
         }
+        & textarea::placeholder{
+            @include adaptiv-font(12, 8);
+        }
         & label {
             @include adaptiv-font(12, 8);
             &:hover{
@@ -629,18 +753,23 @@ body {
         line-height: 1.3;
         font-weight: 300;
         align-self: center;
-        @include adaptiv-font(15, 10);
+        @include adaptiv-font(15, 9);
         &:hover{
             background-color: #00627b67;
         }
     }
     &__img {
         margin-bottom: -rem(100);
+        width: 350px;
+        & img{
+            width: 100%;
+        }
     }
     &__number {
         display: flex;
         align-items: center;
         margin-bottom: -rem(15);
+        @include adaptiv-font(16, 12);
         & p {
             padding-left: -rem(10);
             & span{
@@ -651,8 +780,27 @@ body {
     &__email {
         display: flex;
         align-items: center;
+        @include adaptiv-font(16, 12);
         & p {
             padding-left: -rem(10);
+        }
+    }
+}
+@media(max-width: 767px){
+    .contacts{
+        &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: -rem(40) -rem(20);
+        margin: 0px -rem(10) -rem(30);
+        }
+        &__left {
+            width: 100%;
+        }
+        &__img {
+            width: 250px;
+            margin: 40px 0px 20px;
         }
     }
 }
@@ -709,4 +857,11 @@ body {
     }
 }
 
+@media(max-width: 767px){
+    .footer {
+        &__ul{
+            flex-direction: column;
+        }
+    }
+}
 
