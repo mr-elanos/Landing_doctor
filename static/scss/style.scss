@@ -123,35 +123,38 @@ body {
     &__title {
         text-align: center;
         font-weight: 500;
-        @include adaptiv-font(30, 20);
+        @include adaptiv-font(28, 18);
         margin-bottom: -rem(10);
         color: #00627bc9;
     }
     &__subtitle {
-        font-weight: 400;
+        font-weight: 500;
         text-align: center;
         margin-bottom: -rem(30);
         @include adaptiv-font(18, 14);
     }
     &__text {
-        font-weight: 300;
-        line-height: 1.4;
+        font-weight: 400;
+        line-height: 1.3;
         margin-bottom: -rem(40);
-        @include adaptiv-font(16, 10);
+        @include adaptiv-font(16, 12);
         text-align: justify;
     }
     &__button {
-        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5;
         font-weight: 300;
         text-align: center;
         width: -rem(230);
-        padding: -rem(5) 0px;
         border-radius: -rem(25);
+        padding: -rem(10);
         margin: 10px auto;
         background-color: #00627bc9;
         & a{
             color: #ffffff;
-            @include adaptiv-font(15, 10);
+            @include adaptiv-font(14, 10);
         }
         &:hover{
             cursor: pointer;
@@ -159,7 +162,6 @@ body {
         }
     }
 }
-
 @media (max-width: 1023px){
     .header {
         background-image: none;
@@ -228,7 +230,7 @@ body {
         color: white;
         @include adaptiv-font(20, 12);
         margin: -rem(20) 0px;
-        width: 56vw;
+        width: 61vw;
         position: relative;
         font-weight: 400;
         &:hover{
@@ -250,7 +252,7 @@ body {
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
-        @include adaptiv-font(14, 8);
+        @include adaptiv-font(14, 10);
         line-height: 1.6;
         font-weight: 400;
         &::before{
@@ -331,6 +333,7 @@ body {
         border-radius: 50%;
         color: #ffffff;
         font-weight: 400;
+        @include adaptiv-font(16, 12)
     }
     &__content-text-1, &__content-text-3, &__content-text-5 {
         grid-column-start: 3;
@@ -343,7 +346,7 @@ body {
     }
     &__content-text {
         text-align: center;
-        @include adaptiv-font(15, 10);
+        @include adaptiv-font(16, 12);
         font-weight: 300;
         &:hover{
             cursor: pointer;
@@ -431,14 +434,14 @@ body {
         width: 48%;
     }
     &__title{
-        @include adaptiv-font(22, 14);
+        @include adaptiv-font(22, 16);
         font-weight: 400;
         margin-bottom: -rem(15);
         padding-left: -rem(10);
         color: #00627bc9; 
     }
     &__text{
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 12);
         line-height: 1.7;
         font-weight: 300;
         text-align: justify;
@@ -498,7 +501,7 @@ body {
         color: #00627bc9;
     }
     &__card-text {
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(14, 12);
         font-weight: 300;
         line-height: 1.5;
         text-align: center;
@@ -581,10 +584,10 @@ body {
         top: 0;
         left: 3%;
         font-weight: 700;
-        @include adaptiv-font(70, 40);
+        @include adaptiv-font(70, 50);
     }
     &__text {
-        @include adaptiv-font(14, 8);
+        @include adaptiv-font(14, 10);
         font-weight: 300;
         text-align: center;
         line-height: 1.4;
@@ -610,7 +613,7 @@ body {
     &__li {
         position: relative;
         text-align: center;
-        @include adaptiv-font(16, 10);
+        @include adaptiv-font(16, 12);
         line-height: 1.5;
         font-weight: 300;
         border: -rem(2) solid #DDDDDD;
@@ -660,11 +663,11 @@ body {
     }
     &__after {
         margin: 0px -rem(10);
-        padding-bottom: -rem(5);
+        padding-bottom: -rem(15);
         text-align: center;
         color: #ffffff;
         font-weight: 500;
-        @include adaptiv-font(18, 12);
+        @include adaptiv-font(18, 14);
         &-last{
             padding-bottom: -rem(50);
         }
@@ -717,7 +720,7 @@ body {
             @include adaptiv-font(12, 8);
         }
         & label {
-            @include adaptiv-font(12, 8);
+            @include adaptiv-font(12, 10);
             &:hover{
                 cursor: pointer;
             }
@@ -737,7 +740,7 @@ body {
     &__form-radio{
         margin-bottom: -rem(15);
         &-title{
-            @include adaptiv-font(14, 8);
+            @include adaptiv-font(14, 10);
             padding-bottom: -rem(10);
             text-align: center;
         }
@@ -753,7 +756,7 @@ body {
         line-height: 1.3;
         font-weight: 300;
         align-self: center;
-        @include adaptiv-font(15, 9);
+        @include adaptiv-font(14, 10);
         &:hover{
             background-color: #00627b67;
         }
