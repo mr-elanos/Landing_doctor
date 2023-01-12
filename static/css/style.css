@@ -252,6 +252,9 @@ body {
     font-size: calc(17px + 11 * ((100vw - 320px) / 960));
     font-weight: 500;
   }
+  .header__block {
+    padding-top: 0px;
+  }
 }
 .spec {
   display: flex;
