@@ -566,7 +566,7 @@ body {
     padding-bottom: 1.875rem;
   }
   .advantage__card-text {
-    padding: 0px 1.25rem 5rem;
+    padding: 0px 1.25rem 3.125rem;
   }
 }
 .steps {
@@ -644,6 +644,9 @@ body {
 @media (max-width: 767px) {
   .steps__content {
     padding-bottom: 1.875rem;
+  }
+  .steps__arrow {
+    width: 30%;
   }
 }
 .faq {

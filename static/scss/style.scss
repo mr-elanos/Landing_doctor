@@ -515,7 +515,7 @@ body {
             padding-bottom: -rem(30);
         }
         &__card-text{
-            padding: 0px -rem(20) -rem(80);
+            padding: 0px -rem(20) -rem(50);
         }
     }
 }
@@ -597,6 +597,9 @@ body {
 @media(max-width: 767px){
     .steps__content{
         padding-bottom: -rem(30);
+    }
+    .steps__arrow{
+        width: 30%;
     }
 }
 
