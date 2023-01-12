@@ -492,6 +492,10 @@ body {
         margin: -rem(20) 0px -rem(40);
         width: -rem(80);
         height: -rem(100);
+        &-APA{
+            width: -rem(100);
+            height: -rem(100);
+        }
         & img{
             width: 100%;
             height: 100%;

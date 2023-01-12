@@ -545,6 +545,10 @@ body {
   width: 5rem;
   height: 6.25rem;
 }
+.advantage__card-img-APA {
+  width: 6.25rem;
+  height: 6.25rem;
+}
 .advantage__card-img img {
   width: 100%;
   height: 100%;
