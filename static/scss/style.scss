@@ -79,7 +79,6 @@ body {
             object-fit: cover;
             object-position: center;
             height: 100%;
-            
         }
     }
     &__nav {
@@ -860,6 +859,7 @@ body {
         }
         & img {
             width: -rem(25);
+            height: -rem(25);
         }
     }
     &__text {
