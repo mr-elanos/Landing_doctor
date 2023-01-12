@@ -480,6 +480,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-bottom: 3.125rem;
+  width: 100%;
 }
 .steps__title {
   padding: 5rem 0.625rem 5rem;
@@ -488,24 +489,20 @@ body {
   text-align: center;
   color: rgba(0, 98, 123, 0.7882352941);
 }
-.steps__step {
-  display: flex;
-}
 .steps__step-left {
-  margin-right: 25%;
+  display: flex;
+  justify-content: flex-start;
 }
 .steps__step-right {
-  margin-left: 25%;
-}
-.steps__step-last {
-  margin-left: 54%;
-  width: 65%;
+  display: flex;
+  justify-content: flex-end;
 }
 .steps__arrow {
   width: 15.625rem;
-  height: 5rem;
+  height: 4.375rem;
   align-self: flex-end;
-  opacity: 0.2;
+  justify-self: flex-end;
+  opacity: 0.7;
 }
 .steps__arrow img {
   width: 100%;
@@ -513,9 +510,8 @@ body {
 }
 .steps__item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   box-shadow: 0px 0.3125rem 0.625rem 0.125rem rgba(130, 187, 231, 0.2);
   border-radius: 1.25rem;
   background-color: #ffffff;
@@ -523,13 +519,13 @@ body {
 }
 .steps__item-right {
   margin: 0px 0.625rem 0.625rem 0px;
-  width: 70%;
   min-height: 10.625rem;
+  width: 50%;
 }
 .steps__item-left {
   margin: 0px 0px 0.625rem 0.625rem;
-  width: 70%;
   min-height: 10.625rem;
+  width: 50%;
 }
 .steps__num {
   font-family: "Inconsolata", monospace;
@@ -665,6 +661,21 @@ body {
   display: flex;
   flex-direction: column;
 }
+.contacts__form input::-moz-placeholder {
+  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+}
+.contacts__form input:-ms-input-placeholder {
+  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+}
+.contacts__form input::placeholder {
+  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+}
+.contacts__form label {
+  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+}
+.contacts__form label:hover {
+  cursor: pointer;
+}
 .contacts__form-name, .contacts__form-phone, .contacts__form-text {
   background-color: rgba(0, 98, 123, 0.0745098039);
   padding: 0.9375rem;
@@ -676,12 +687,26 @@ body {
 .contacts__form-text {
   padding-bottom: 5.3125rem;
 }
+.contacts__form-radio {
+  margin-bottom: 0.9375rem;
+}
+.contacts__form-radio-title {
+  font-size: calc(8px + 6 * ((100vw - 320px) / 960));
+  padding-bottom: 0.625rem;
+  text-align: center;
+}
+.contacts__form-radio div {
+  margin-bottom: 0.3125rem;
+}
 .contacts__button {
   padding: 0.625rem 2.5rem;
   border-radius: 5px;
   background-color: rgba(0, 98, 123, 0.7882352941);
   color: #ffffff;
+  line-height: 1.3;
+  font-weight: 300;
   align-self: center;
+  font-size: calc(10px + 5 * ((100vw - 320px) / 960));
 }
 .contacts__button:hover {
   background-color: rgba(0, 98, 123, 0.4039215686);

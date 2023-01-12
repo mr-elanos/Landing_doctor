@@ -423,6 +423,7 @@ body {
         display: flex;
         flex-direction: column;
         padding-bottom: -rem(50);
+        width: 100%;
     }
     &__title {
         padding: -rem(80) -rem(10) -rem(80);
@@ -432,23 +433,21 @@ body {
         color: #00627bc9;
     }
     &__step{
-        display: flex;
         &-left{
-            margin-right: 25%;
+            display:flex;
+            justify-content:flex-start;
         }
         &-right{
-            margin-left: 25%;
-        }
-        &-last{
-            margin-left: 54%;
-            width: 65%;
+            display:flex;
+            justify-content:flex-end;
         }
     }
     &__arrow{
         width: -rem(250);
-        height: -rem(80);
+        height: -rem(70);
         align-self: flex-end;
-        opacity: 0.2;
+        justify-self: flex-end;
+        opacity: 0.7;
         & img{
             width: 100%;
             height: 100%;
@@ -456,9 +455,8 @@ body {
     }
     &__item{
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         box-shadow: 0px -rem(5) -rem(10) -rem(2) rgba(130, 187, 231, 0.2);
         border-radius: -rem(20);
         background-color: #ffffff;
@@ -466,14 +464,15 @@ body {
     }
     &__item-right {
         margin: 0px -rem(10) -rem(10) 0px;
-        width: 70%;
         min-height: -rem(170);
+        width: 50%;
     }
     &__item-left {
         margin: 0px 0px -rem(10) -rem(10);
-        width: 70%;
         min-height: -rem(170);
+        width: 50%;
     }
+    
     &__num {
         font-family: 'Inconsolata', monospace;
         color: #8fb8e236;
@@ -607,6 +606,15 @@ body {
     &__form {
         display: flex;
         flex-direction: column;
+        & input::placeholder{
+            @include adaptiv-font(12, 8);
+        }
+        & label {
+            @include adaptiv-font(12, 8);
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
     &__form-name, &__form-phone, &__form-text {
         background-color: #00627b13;
@@ -619,12 +627,26 @@ body {
     &__form-text {
         padding-bottom:-rem(85);
     }
+    &__form-radio{
+        margin-bottom: -rem(15);
+        &-title{
+            @include adaptiv-font(14, 8);
+            padding-bottom: -rem(10);
+            text-align: center;
+        }
+        & div{
+            margin-bottom: -rem(5);
+        }
+    }
     &__button {
         padding: -rem(10) -rem(40);
         border-radius: 5px;
         background-color: #00627bc9;
         color: #ffffff;
+        line-height: 1.3;
+        font-weight: 300;
         align-self: center;
+        @include adaptiv-font(15, 10);
         &:hover{
             background-color: #00627b67;
         }
