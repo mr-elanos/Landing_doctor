@@ -108,6 +108,7 @@ body {
             color: #286270dc;
             text-transform: uppercase;
             @include adaptiv-font(12, 7);
+            transition: all 0.2s linear;
             &:hover{
                 color: #28627086;
             }
@@ -152,13 +153,14 @@ body {
         padding: -rem(10);
         margin: 10px auto;
         background-color: #00627bc9;
+        transition: all 0.3s linear;
         & a{
             color: #ffffff;
             @include adaptiv-font(16, 12);
         }
         &:hover{
             cursor: pointer;
-            background-color: #00627b48;
+            background-color: #00627b6e;
         }
     }
 }
@@ -332,7 +334,8 @@ body {
         border-radius: 50%;
         color: #ffffff;
         font-weight: 400;
-        @include adaptiv-font(16, 12)
+        @include adaptiv-font(16, 12);
+        transition: all 0.3s;
     }
     &__content-text-1, &__content-text-3, &__content-text-5 {
         grid-column-start: 3;
@@ -347,6 +350,7 @@ body {
         text-align: center;
         @include adaptiv-font(16, 12);
         font-weight: 300;
+        transition: all 0.1s linear;
         &:hover{
             cursor: pointer;
             color: #25a1c0c9;
@@ -732,6 +736,7 @@ body {
         background-color: #00627b13;
         padding: -rem(15);
         margin-bottom: -rem(15);
+        transition: all 0.2s linear;
         &:hover{
             background-color: #239bb913;
         }
@@ -759,6 +764,7 @@ body {
         font-weight: 300;
         align-self: center;
         @include adaptiv-font(14, 12);
+        transition: all 0.3s linear;
         &:hover{
             background-color: #00627b67;
         }
@@ -836,10 +842,14 @@ body {
             margin: 0px -rem(10);
         }
         & a{
+            transition: all 1s linear;
             color: #ffffff;
             display: flex;
             align-items: center;
             @include adaptiv-font(12, 8);
+            :hover{
+                color: #80d5f7;
+            }
         }
         &:first-child {
             margin-left: 0px;

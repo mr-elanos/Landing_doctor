@@ -168,6 +168,7 @@ body {
   color: rgba(40, 98, 112, 0.862745098);
   text-transform: uppercase;
   font-size: calc(7px + 5 * ((100vw - 320px) / 960));
+  transition: all 0.2s linear;
 }
 .header__li a:hover {
   color: rgba(40, 98, 112, 0.5254901961);
@@ -211,6 +212,7 @@ body {
   padding: 0.625rem;
   margin: 10px auto;
   background-color: rgba(0, 98, 123, 0.7882352941);
+  transition: all 0.3s linear;
 }
 .header__button a {
   color: #ffffff;
@@ -218,7 +220,7 @@ body {
 }
 .header__button:hover {
   cursor: pointer;
-  background-color: rgba(0, 98, 123, 0.2823529412);
+  background-color: rgba(0, 98, 123, 0.431372549);
 }
 
 @media (max-width: 1023px) {
@@ -390,6 +392,7 @@ body {
   color: #ffffff;
   font-weight: 400;
   font-size: calc(12px + 4 * ((100vw - 320px) / 960));
+  transition: all 0.3s;
 }
 .education__content-text-1, .education__content-text-3, .education__content-text-5 {
   grid-column-start: 3;
@@ -403,6 +406,7 @@ body {
   text-align: center;
   font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
+  transition: all 0.1s linear;
 }
 .education__content-text:hover {
   cursor: pointer;
@@ -791,6 +795,7 @@ body {
   background-color: rgba(0, 98, 123, 0.0745098039);
   padding: 0.9375rem;
   margin-bottom: 0.9375rem;
+  transition: all 0.2s linear;
 }
 .contacts__form-name:hover, .contacts__form-phone:hover, .contacts__form-text:hover {
   background-color: rgba(35, 155, 185, 0.0745098039);
@@ -818,6 +823,7 @@ body {
   font-weight: 300;
   align-self: center;
   font-size: calc(12px + 2 * ((100vw - 320px) / 960));
+  transition: all 0.3s linear;
 }
 .contacts__button:hover {
   background-color: rgba(0, 98, 123, 0.4039215686);
@@ -894,10 +900,14 @@ body {
   margin: 0px 0.625rem;
 }
 .footer__ul a {
+  transition: all 1s linear;
   color: #ffffff;
   display: flex;
   align-items: center;
   font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+}
+.footer__ul a :hover {
+  color: #80d5f7;
 }
 .footer__ul:first-child {
   margin-left: 0px;
