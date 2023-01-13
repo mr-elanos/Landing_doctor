@@ -198,13 +198,13 @@ body {
   font-weight: 500;
   text-align: center;
   margin-bottom: 1.875rem;
-  font-size: calc(14px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(16px + 2 * ((100vw - 320px) / 960));
 }
 .header__text {
   font-weight: 400;
   line-height: 1.3;
   margin-bottom: 2.5rem;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(15px + 1 * ((100vw - 320px) / 960));
   text-align: justify;
 }
 .header__button {
@@ -394,7 +394,7 @@ body {
 }
 .spec__tab-title {
   color: white;
-  font-size: calc(12px + 8 * ((100vw - 320px) / 960));
+  font-size: calc(14px + 6 * ((100vw - 320px) / 960));
   margin: 1.25rem 0px;
   width: 67vw;
   position: relative;
@@ -418,7 +418,7 @@ body {
 .spec__tab-ul li {
   transition: all 2s;
   color: #ffffff;
-  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(13px + 1 * ((100vw - 320px) / 960));
   line-height: 1.6;
   font-weight: 400;
 }
@@ -472,7 +472,7 @@ body {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
   align-items: center;
-  margin: 0px 0.625rem;
+  padding: 0px 0.625rem;
 }
 .education__content-item::after {
   content: "";
@@ -561,6 +561,7 @@ body {
     grid-template-columns: auto 1fr;
     -moz-column-gap: 0.625rem;
          column-gap: 0.625rem;
+    padding: 0px 0.625rem;
   }
   .education__content-item::after {
     grid-column-start: 1;
@@ -659,13 +660,13 @@ body {
   height: 100%;
 }
 .advantage__card-title {
-  font-size: calc(16px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(17px + 1 * ((100vw - 320px) / 960));
   font-weight: 500;
   margin: 0px 0.625rem 1.25rem;
   color: rgba(0, 98, 123, 0.7882352941);
 }
 .advantage__card-text {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(15px + 1 * ((100vw - 320px) / 960));
   font-weight: 300;
   line-height: 1.5;
   text-align: center;
@@ -751,7 +752,7 @@ body {
   font-size: calc(50px + 20 * ((100vw - 320px) / 960));
 }
 .steps__text {
-  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   text-align: center;
   line-height: 1.4;
@@ -764,7 +765,11 @@ body {
     padding-bottom: 1.875rem;
   }
   .steps__arrow {
-    width: 30%;
+    width: 19%;
+    height: 30px;
+  }
+  .steps__item-right, .steps__item-left {
+    width: 65%;
   }
 }
 .faq {
@@ -873,7 +878,7 @@ body {
 .contacts__subtitle {
   text-align: center;
   margin: 0px 0.625rem 1.25rem;
-  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
   line-height: 1.4;
 }
@@ -882,25 +887,25 @@ body {
   flex-direction: column;
 }
 .contacts__form input::-moz-placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form input:-ms-input-placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form input::placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form textarea::-moz-placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form textarea:-ms-input-placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form textarea::placeholder {
-  font-size: calc(8px + 4 * ((100vw - 320px) / 960));
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
 }
 .contacts__form label {
-  font-size: calc(10px + 2 * ((100vw - 320px) / 960));
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
 }
 .contacts__form label:hover {
   cursor: pointer;

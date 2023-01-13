@@ -137,13 +137,13 @@ body {
         font-weight: 500;
         text-align: center;
         margin-bottom: -rem(30);
-        @include adaptiv-font(18, 14);
+        @include adaptiv-font(18, 16);
     }
     &__text {
         font-weight: 400;
         line-height: 1.3;
         margin-bottom: -rem(40);
-        @include adaptiv-font(16, 14);
+        @include adaptiv-font(16, 15);
         text-align: justify;
     }
     &__button {
@@ -334,7 +334,7 @@ body {
     }
     &__tab-title {
         color: white;
-        @include adaptiv-font(20, 12);
+        @include adaptiv-font(20, 14);
         margin: -rem(20) 0px;
         width: 67vw;
         position: relative;
@@ -358,7 +358,7 @@ body {
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
-        @include adaptiv-font(14, 12);
+        @include adaptiv-font(14, 13);
         line-height: 1.6;
         font-weight: 400;
         &::before{
@@ -411,7 +411,7 @@ body {
         grid-template-rows: 1fr -rem(30);
         column-gap: -rem(20);
         align-items: center;
-        margin: 0px -rem(10);
+        padding: 0px -rem(10);
         &::after{
             content: '';
             width: -rem(3);
@@ -502,6 +502,7 @@ body {
         &__content-item{
             grid-template-columns: auto 1fr;
             column-gap: -rem(10);
+            padding: 0px -rem(10);
             &::after{
                 grid-column-start: 1;
                 grid-column-end: 2;
@@ -603,13 +604,13 @@ body {
         }
     }
     &__card-title {
-        @include adaptiv-font(18, 16);
+        @include adaptiv-font(18, 17);
         font-weight: 500;
         margin: 0px -rem(10) -rem(20);
         color: #00627bc9;
     }
     &__card-text {
-        @include adaptiv-font(16, 14);
+        @include adaptiv-font(16, 15);
         font-weight: 300;
         line-height: 1.5;
         text-align: center;
@@ -702,7 +703,7 @@ body {
         @include adaptiv-font(70, 50);
     }
     &__text {
-        @include adaptiv-font(14, 12);
+        @include adaptiv-font(16, 14);
         font-weight: 300;
         text-align: center;
         line-height: 1.4;
@@ -711,11 +712,17 @@ body {
     }
 }
 @media(max-width: 767px){
-    .steps__content{
-        padding-bottom: -rem(30);
-    }
-    .steps__arrow{
-        width: 30%;
+    .steps{
+        &__content{
+            padding-bottom: -rem(30);
+        }
+        &__arrow{
+            width: 19%;
+            height: 30px;
+        }
+        &__item-right, &__item-left {
+            width: 65%;
+        }
     }
 }
 
@@ -824,7 +831,7 @@ body {
     &__subtitle {
         text-align: center;
         margin: 0px -rem(10) -rem(20);
-        @include adaptiv-font(14, 10);
+        @include adaptiv-font(16, 12);
         font-weight: 300;
         line-height: 1.4;
     }
@@ -832,13 +839,13 @@ body {
         display: flex;
         flex-direction: column;
         & input::placeholder{
-            @include adaptiv-font(12, 8);
+            @include adaptiv-font(14, 10);
         }
         & textarea::placeholder{
-            @include adaptiv-font(12, 8);
+            @include adaptiv-font(14, 10);
         }
         & label {
-            @include adaptiv-font(12, 10);
+            @include adaptiv-font(14, 12);
             &:hover{
                 cursor: pointer;
             }
