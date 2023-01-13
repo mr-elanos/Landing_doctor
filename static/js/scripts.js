@@ -20,17 +20,30 @@ educTabs.forEach(tab => {
 //Education block modals
 const educationModalBtns = document.querySelectorAll('[data-education-modal]');
 const educationModals = document.querySelectorAll('[data-education-modal-content]');
+let body = document.querySelector('body');
 
 educationModalBtns.forEach(btn =>{
     btn.addEventListener('click', function(e){
         educationModals.forEach(modal =>{
             if (modal.id === btn.getAttribute('data-education-modal')) {
                 modal.classList.remove('hidden');
+                body.classList.add('scroll__hidden');
                 const closeBtn = modal.firstElementChild;
                 closeBtn.addEventListener('click', function(e){
                     modal.classList.add('hidden')
+                    body.classList.remove('scroll__hidden');
                 })
             };
         })
     })
 });
+
+//burger menu
+let menuBtn = document.querySelector('.header__burger-btn');
+let menu = document.querySelector('.header__burger-menu');
+
+menuBtn.addEventListener('click', function(){
+	menuBtn.classList.toggle('header__burger-btn-active');
+	menu.classList.toggle('header__burger-menu-active');
+    body.classList.toggle('scroll__hidden');
+})
