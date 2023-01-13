@@ -230,7 +230,7 @@ body {
   background-color: rgba(0, 98, 123, 0.431372549);
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .header {
     background-color: rgba(226, 225, 231, 0.6862745098);
   }
@@ -340,13 +340,15 @@ body {
   }
   .header__fone {
     height: 100%;
-    -o-object-fit: center;
-       object-fit: center;
+  }
+  .header__fone img {
+    -o-object-position: center;
+       object-position: center;
   }
 }
 @media (max-width: 590px) {
   .header {
-    height: 1500px;
+    height: 1380px;
   }
   .header__block {
     padding-top: 0px;
@@ -394,7 +396,7 @@ body {
   color: white;
   font-size: calc(12px + 8 * ((100vw - 320px) / 960));
   margin: 1.25rem 0px;
-  width: 61vw;
+  width: 67vw;
   position: relative;
   font-weight: 400;
 }
@@ -557,6 +559,8 @@ body {
   }
   .education__content-item {
     grid-template-columns: auto 1fr;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
   .education__content-item::after {
     grid-column-start: 1;
@@ -647,12 +651,8 @@ body {
 }
 .advantage__card-img {
   margin: 1.25rem 0px 2.5rem;
-  width: 5rem;
-  height: 6.25rem;
-}
-.advantage__card-img-APA {
   width: 6.25rem;
-  height: 6.25rem;
+  height: 5.625rem;
 }
 .advantage__card-img img {
   width: 100%;
@@ -1050,5 +1050,8 @@ body {
 @media (max-width: 767px) {
   .footer__ul {
     flex-direction: column;
+  }
+  .footer__ul li {
+    margin-bottom: 5px;
   }
 }
