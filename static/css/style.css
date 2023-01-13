@@ -348,6 +348,9 @@ body {
     padding-top: 30px;
     height: auto;
   }
+  .header__text {
+    text-align: left;
+  }
   .header__fone {
     height: 100%;
   }
@@ -648,6 +651,9 @@ body {
   .qualification__content-left, .qualification__content-right {
     width: 80%;
     margin-bottom: 1.25rem;
+  }
+  .qualification__text {
+    text-align: left;
   }
 }
 .advantage {

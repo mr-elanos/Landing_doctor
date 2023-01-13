@@ -285,7 +285,9 @@ body {
             padding-top: 30px;
             height:auto;
         }
-        
+        &__text {
+            text-align:left;
+        }
         &__fone{
             height: 100%;
             & img{
@@ -592,6 +594,9 @@ body {
         &__content-left,  &__content-right{
             width: 80%;
             margin-bottom: -rem(20);
+        }
+        &__text{
+            text-align: left;
         }
     }
 }
