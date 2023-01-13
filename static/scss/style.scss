@@ -229,6 +229,14 @@ body {
                 }
             }
         }
+        &__burger-img{
+            width: 30px;
+            height: 30px;
+            & img{
+                width: 100%;
+                height: 100%;
+            }
+        }
         &__burger-menu{
             display: flex;
             align-items: center;
@@ -253,6 +261,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
                 & li {
                     padding-bottom: 30px;
                     & a{
