@@ -536,6 +536,13 @@ body {
         }
     }
 }
+@media(max-width: 480px){
+    .advantage {
+        &__cards{
+            margin: 0px 5%;
+        }
+    }
+}
 
 .steps {
     background-color: #e2e1e7af;

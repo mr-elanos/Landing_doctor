@@ -586,6 +586,11 @@ body {
     padding: 0px 1.25rem 3.125rem;
   }
 }
+@media (max-width: 480px) {
+  .advantage__cards {
+    margin: 0px 5%;
+  }
+}
 .steps {
   background-color: rgba(226, 225, 231, 0.6862745098);
 }
