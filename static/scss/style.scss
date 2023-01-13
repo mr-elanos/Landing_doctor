@@ -361,7 +361,6 @@ body {
         color: #ffffff;
         font-weight: 400;
         @include adaptiv-font(16, 12);
-        transition: all 0.3s;
     }
     &__content-text-1, &__content-text-3, &__content-text-5 {
         grid-column-start: 3;
@@ -423,12 +422,11 @@ body {
         }
         &__content-item{
             grid-template-columns: auto 1fr;
-            
             &::after{
                 grid-column-start: 1;
                 grid-column-end: 2;
                 grid-row-start: 2;
-                grid-row-end: 3;
+                grid-row-end: 3;                
             }
         }
         &__content-text-1, &__content-text-3, &__content-text-5, &__content-text-2, &__content-text-4, &__content-text-6 {
@@ -444,6 +442,7 @@ body {
             grid-column-end: 2;
             grid-row-start: 1;
             grid-row-end: 2;
+            padding: -rem(50) -rem(40);
         }
     }
 }

@@ -419,7 +419,6 @@ body {
   color: #ffffff;
   font-weight: 400;
   font-size: calc(12px + 4 * ((100vw - 320px) / 960));
-  transition: all 0.3s;
 }
 .education__content-text-1, .education__content-text-3, .education__content-text-5 {
   grid-column-start: 3;
@@ -500,6 +499,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding: 3.125rem 2.5rem;
   }
 }
 .qualification {
