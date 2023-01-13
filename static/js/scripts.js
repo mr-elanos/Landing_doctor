@@ -41,7 +41,7 @@ educationModalBtns.forEach(btn =>{
 //burger menu
 let menuBtn = document.querySelector('.header__burger-btn');
 let menu = document.querySelector('.header__burger-menu');
-let navBtns = document.querySelectorAll('#burgerBtn')
+let navBtns = document.querySelectorAll('.burger__btn')
 
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('header__burger-btn-active');
