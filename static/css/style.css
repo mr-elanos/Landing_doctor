@@ -595,6 +595,17 @@ body {
     padding: 3.125rem 2.5rem;
   }
 }
+@media (max-width: 767px) {
+  .education::after {
+    margin-top: 0px;
+  }
+  .education__content-item {
+    grid-template-columns: auto 1fr;
+    -moz-column-gap: 0rem;
+         column-gap: 0rem;
+    padding: 0px 0rem;
+  }
+}
 .qualification {
   background-color: rgba(226, 225, 231, 0.6862745098);
 }

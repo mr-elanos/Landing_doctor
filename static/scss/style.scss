@@ -537,6 +537,18 @@ body {
         }
     }
 }
+@media(max-width: 767px){
+    .education {
+        &::after{
+            margin-top: 0px;
+        }
+        &__content-item{
+            grid-template-columns: auto 1fr;
+            column-gap: -rem(0);
+            padding: 0px -rem(0);
+        }
+    }
+}
 
 .qualification {
     background-color: #e2e1e7af;
