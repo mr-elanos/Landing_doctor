@@ -154,7 +154,7 @@ body {
         box-shadow: 0px -rem(8) -rem(16) 0px rgba(0,0,0,0.2);
         z-index: 1;
         & a{
-            color: black;
+            color: #00627bc9;
             padding: -rem(12) -rem(12);
             text-decoration: none;
             text-align: center;
@@ -284,6 +284,9 @@ body {
                 right: 0;
                 & li{
                     margin-right: 30px;
+                }
+                & :first-child a{
+                    color: black;
                 }
             }
         }
