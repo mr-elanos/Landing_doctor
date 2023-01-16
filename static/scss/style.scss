@@ -483,8 +483,8 @@ body {
         display: flex;
         &-btn{
             position: fixed;
-            right: 17%;
-            top: 21%;
+            right: 2%;
+            top: 2%;
             padding: -rem(5) -rem(10);
             border-radius: 50%;
             color: #e9e7e7;
@@ -498,8 +498,8 @@ body {
         & img{
             align-self: center;
             margin: 0 auto;
-            width: 60vw;
-            height: 50vh;
+            max-width: 90vw;
+            max-height: 80vh;
         }
     }
 }

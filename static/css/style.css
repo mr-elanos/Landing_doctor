@@ -543,8 +543,8 @@ body {
 }
 .education__img-btn {
   position: fixed;
-  right: 17%;
-  top: 21%;
+  right: 2%;
+  top: 2%;
   padding: 0.3125rem 0.625rem;
   border-radius: 50%;
   color: #e9e7e7;
@@ -558,8 +558,8 @@ body {
 .education__img img {
   align-self: center;
   margin: 0 auto;
-  width: 60vw;
-  height: 50vh;
+  max-width: 90vw;
+  max-height: 80vh;
 }
 
 .hidden {
