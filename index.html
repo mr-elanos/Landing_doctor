@@ -4,15 +4,18 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet" media="all">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet" media="all"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap"
+        rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet"
+        media="all">
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="icon" href="./static/img/icon.ico">
     <title>Твій спеціаліст з психічного здоров'я</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Владислав Плєхов - твій спеціаліст з психічного здоров'я, лікар-психіатр, психотерапевт">
+    <meta name="description"
+        content="Владислав Плєхов - твій спеціаліст з психічного здоров'я, лікар-психіатр, психотерапевт">
     <meta name="keywords" content="Психіатр, психотерапевт, лікар, психічне здоров'я, психічні розлади">
     <meta name="robots" content="index, follow">
 </head>
@@ -25,13 +28,23 @@
                     <img src="./static/img/logo.webp" alt="Home">
                 </a>
             </div>
-            <ul class="header__ul">
-                <li class="header__li"><a href="#spec">Спеціалізація</a></li>
-                <li class="header__li"><a href="#advantage">Мої переваги</a></li>
-                <li class="header__li"><a href="#steps">Етапи співпраці</a></li>
-                <li class="header__li"><a href="#quations">Важливі питання</a></li>
-                <li class="header__li"><a href="#contacts">Контакти</a></li>
-            </ul>
+            <div class="header__menu">
+                <ul class="header__ul">
+                    <li class="header__li"><a href="#spec">Спеціалізація</a></li>
+                    <li class="header__li"><a href="#advantage">Мої переваги</a></li>
+                    <li class="header__li"><a href="#steps">Етапи співпраці</a></li>
+                    <li class="header__li"><a href="#quations">Важливі питання</a></li>
+                    <li class="header__li"><a href="#contacts">Контакти</a></li>
+                </ul>
+                <div class="header__dropdown">
+                    <button class="header__dropbtn">UA</button>
+                    <div id="myDropdown" class="header__dropdown-content">
+                        <a href="#">UA</a>
+                        <a href="#">EN</a>
+                        <a href="#">RU</a>
+                    </div>
+                </div>
+            </div>
         </nav>
         <div class="header__burger">
             <img src="./static/img/logo.webp" alt="Home">
@@ -49,7 +62,16 @@
                     <li class="header__burger-li"><a class="burger__btn" href="#steps">Етапи співпраці</a></li>
                     <li class="header__burger-li"><a class="burger__btn" href="#quations">Важливі питання</a></li>
                     <li class="header__burger-li"><a class="burger__btn" href="#contacts">Контакти</a></li>
-                    <li class="header__burger-li"><a href="https://instagram.com/dr_plekhov?igshid=YWJhMjlhZTc=" target="_blank"><img class='header__burger-img' src="./static/img/insta.png" alt=""></a></li>
+                    <li class="header__burger-li"><a href="https://instagram.com/dr_plekhov?igshid=YWJhMjlhZTc="
+                            target="_blank"><img class='header__burger-img' src="./static/img/insta.png" alt=""></a>
+                    </li>
+                    <li>
+                        <ul class="header__burger-lang">
+                            <li><a href="#">UA</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">RU</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </navheader__burger-nav>
         </div>
@@ -316,11 +338,12 @@
                     <ul class="faq__ul">
                         <li class="faq__li">Тривалість консультації: до 60 хв. </li>
                         <li class="faq__li">Мова консультацій: українська, англійська та російська</li>
-                        <li class="faq__li">Між психотерапевтичними зустрічами ми завжди зберігаємо зв’язок (у Telegram або
+                        <li class="faq__li">Між психотерапевтичними зустрічами ми завжди зберігаємо зв’язок (у Telegram
+                            або
                             Viber), аби Ви мали можливість задати нагальні питання</li>
                     </ul>
                 </div>
-                <p class="faq__after">Всі консультації є виключно анонімними. 
+                <p class="faq__after">Всі консультації є виключно анонімними.
                 </p>
                 <p class="faq__after faq__after-last">Розголошення деталей співпраці та особливостей
                     терапії третім особам НЕ можливе!
@@ -332,10 +355,12 @@
             <div class="contacts__container">
                 <div class="contacts__content">
                     <div class="contacts__left">
-                        <h3 class="contacts__subtitle">Заповніть форму або зв'яжіться зі мною зручним для Вас способом</h3>
+                        <h3 class="contacts__subtitle">Заповніть форму або зв'яжіться зі мною зручним для Вас способом
+                        </h3>
                         <form action="#" method="get" class="contacts__form">
                             <input type="text" name="name" placeholder="Ваше ім'я" class="contacts__form-name">
-                            <input type="tel" name="phone" placeholder="Ваш номер телефону" class="contacts__form-phone">
+                            <input type="tel" name="phone" placeholder="Ваш номер телефону"
+                                class="contacts__form-phone">
                             <div class="contacts__form-radio">
                                 <p class="contacts__form-radio-title">Як з Вами краще зв'язатися?</p>
                                 <div>
@@ -351,7 +376,8 @@
                                     <label for="contact_Choice_3">WhatsApp</label>
                                 </div>
                             </div>
-                            <textarea type="text" name="text" placeholder="Опишіть Ваше питання" class="contacts__form-text"></textarea>
+                            <textarea type="text" name="text" placeholder="Опишіть Ваше питання"
+                                class="contacts__form-text"></textarea>
                             <button class="contacts__button" type="submit">Записатися<br> на консультацію</button>
                         </form>
                     </div>
@@ -378,16 +404,21 @@
                 <div class="footer__left">
                     <p class="footer__title">Зв'язок</p>
                     <ul class="footer__ul">
-                        <li><a href="viber://chat?number=%2B380984938492" target="_blank"><img src="./static/img/viber.png" alt=""><span>Viber</span></a></li>
-                        <li><a href="https://wa.me/380984938492" target="_blank"><img src="./static/img/whatsapp.png" alt=""><span>WhatsApp</span></a></li>
-                        <li><a href="https://t.me/dr_plekhov" target="_blank"><img src="./static/img/telegram.png" alt=""><span>Telegram</span></a></li>
+                        <li><a href="viber://chat?number=%2B380984938492" target="_blank"><img
+                                    src="./static/img/viber.png" alt=""><span>Viber</span></a></li>
+                        <li><a href="https://wa.me/380984938492" target="_blank"><img src="./static/img/whatsapp.png"
+                                    alt=""><span>WhatsApp</span></a></li>
+                        <li><a href="https://t.me/dr_plekhov" target="_blank"><img src="./static/img/telegram.png"
+                                    alt=""><span>Telegram</span></a></li>
                     </ul>
                 </div>
                 <div class="footer__right">
                     <p class="footer__title">Я в соціальних мережах</p>
                     <ul class="footer__ul">
-                        <li><a href="https://instagram.com/dr_plekhov?igshid=YWJhMjlhZTc=" target="_blank"><img src="./static/img/insta.png" alt=""><span>Instagram</span></a></li>
-                        <li><a href="https://www.tiktok.com/@vladpliekhov" target="_blank"><img src="./static/img/tictok.png" alt=""><span>Tik Tok</span></a></li>
+                        <li><a href="https://instagram.com/dr_plekhov?igshid=YWJhMjlhZTc=" target="_blank"><img
+                                    src="./static/img/insta.png" alt=""><span>Instagram</span></a></li>
+                        <li><a href="https://www.tiktok.com/@vladpliekhov" target="_blank"><img
+                                    src="./static/img/tictok.png" alt=""><span>Tik Tok</span></a></li>
                     </ul>
                 </div>
             </div>

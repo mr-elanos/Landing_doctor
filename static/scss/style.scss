@@ -84,6 +84,14 @@ body {
             height: 100%;
         }
     }    
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: -rem(90);
+        align-items: center;
+        margin-top: -rem(10);
+    }
     &__burger, &__burger-menu{
         display: none;
     }
@@ -104,8 +112,7 @@ body {
         display: flex;
     }
     &__li {
-        margin-right: -rem(30);
-        padding-top: -rem(35);
+        margin-right: -rem(30);        
         &:last-child{
             margin-right: 10px
         }
@@ -119,6 +126,46 @@ body {
             }
         }
     }
+	&__dropdown {
+        position: relative;
+        display: inline-block;
+        &:hover{
+            .header__dropdown-content{
+                display: block;
+            }
+            .header__dropbtn {
+                transition: all 0.2s linear;
+                background-color: #28627086;
+            }
+        }
+	}
+	&__dropbtn {
+        background-color: #00627bc9;
+        border-radius: -rem(5);
+        color: white;
+        padding: -rem(12);
+        @include adaptiv-font(14, 8);
+        border: none;
+	}
+	&__dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        box-shadow: 0px -rem(8) -rem(16) 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        & a{
+            color: black;
+            padding: -rem(12) -rem(12);
+            text-decoration: none;
+            text-align: center;
+            @include adaptiv-font(14, 8);
+            display: block;
+            transition: all 0.2s linear;
+            &:hover{
+                background-color: #ddd;
+            }
+        }
+	}
     &__block {
         width: 45%;
         display: flex;
@@ -228,6 +275,17 @@ body {
                     transform: translate(-50%, 0%) rotate(-45deg); 
                 }
             }
+            &-lang{
+                display: flex;
+                justify-content: space-between;
+                width:initial;
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                & li{
+                    margin-right: 30px;
+                }
+            }
         }
         &__burger-img{
             width: 30px;
@@ -293,6 +351,9 @@ body {
             & img{
                 object-position: center;
             }
+        }
+        &__burger-menu-active li{
+            padding-bottom: 20px;
         }
     }
 }
