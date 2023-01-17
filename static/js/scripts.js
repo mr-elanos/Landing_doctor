@@ -20,7 +20,7 @@ educTabs.forEach(tab => {
 //Education block modals
 const educationModalBtns = document.querySelectorAll('[data-education-modal]');
 const educationModals = document.querySelectorAll('[data-education-modal-content]');
-let body = document.querySelector('body');
+const body = document.querySelector('body');
 
 educationModalBtns.forEach(btn =>{
     btn.addEventListener('click', function(e){
@@ -39,9 +39,9 @@ educationModalBtns.forEach(btn =>{
 });
 
 //burger menu
-let menuBtn = document.querySelector('.header__burger-btn');
+const menuBtn = document.querySelector('.header__burger-btn');
 let menu = document.querySelector('.header__burger-menu');
-let navBtns = document.querySelectorAll('.burger__btn')
+let navBtns = document.querySelectorAll('.burger__btn');
 
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('header__burger-btn-active');
@@ -55,3 +55,14 @@ navBtns.forEach(btn =>{
     body.classList.remove('scroll__hidden');
     })
 })
+
+
+const  formBtn = document.querySelector('.contacts__button');
+const formSuccess = document.querySelector('.contacts__left-success');
+
+formBtn.addEventListener('click', function(e){
+    formSuccess.classList.add('active');
+    setTimeout(function(){
+        formSuccess.classList.remove('active');
+    }, 7000)
+});
