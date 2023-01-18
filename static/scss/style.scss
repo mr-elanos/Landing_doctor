@@ -408,11 +408,11 @@ body {
             }
         }
     }
-    &__tab-title, &__tab-title.active {
+    &__tab-title {
         color: #ffffff;
         @include adaptiv-font(20, 14);
         margin: -rem(20) 0px;
-        width: 67vw;
+        width: 69vw;
         position: relative;
         font-weight: 400;
         &::after{
@@ -444,7 +444,7 @@ body {
         color: #ffffff;
         margin-bottom: -rem(5);
         @include adaptiv-font(14, 13);
-        line-height: 1.6;
+        line-height: 1.3;
         font-weight: 400;
         &::before{
             content: '';
@@ -459,11 +459,30 @@ body {
 }
 @media(max-width: 767px){
     .spec {
-        &__tab-title, &__tab-title.active {
+        &__tab-title {
             width: 95vw;
+            &::before{
+                content: '';
+                border: solid #ffffff;
+                border-width: 0 -rem(2) -rem(2) 0;
+                display: inline-block;
+                padding: -rem(3);
+                margin: 0px 10px 3px 5px;
+                transform: rotate(45deg);
+                transition: all 0.2s linear;
+            }
+            &::after{
+                display: none;
+            }
+            &.active::before{
+                transform: rotate(-135deg);
+            }
         }
         &__tab:last-child::after{
         margin-bottom: 40px;
+        }
+        &__tab-ul li{
+            width: 90%;
         }
     }
 }
