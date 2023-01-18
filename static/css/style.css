@@ -596,9 +596,10 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6587009804) 14%, rgba(0, 0, 0, 0.9136029412) 62%, rgba(0, 0, 0, 0.9192051821) 90%);
   top: 0;
   left: 0;
-  background-color: rgba(19, 18, 18, 0.568);
   display: flex;
   opacity: 0;
   z-index: -1;
