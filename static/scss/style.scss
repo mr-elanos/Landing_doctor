@@ -409,31 +409,40 @@ body {
         }
     }
     &__tab-title {
-        color: white;
+        color: #ffffff;
         @include adaptiv-font(20, 14);
         margin: -rem(20) 0px;
         width: 67vw;
         position: relative;
         font-weight: 400;
+        &::after{
+            content: '';
+            border: solid #ffffff;
+            border-width: 0 -rem(2) -rem(2) 0;
+            display: inline-block;
+            position: absolute;
+            padding: -rem(5);
+            top: 0;
+            right: -rem(5);
+            transform: rotate(45deg);
+            transition: all 0.2s linear;
+        }
         &:hover{
             cursor: pointer;
         }
-    }
-    &__tab-span{
-        margin: 0px -rem(10) -rem(10);
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        position: absolute;
-        padding: 5px;
-        right: 0;
+        &.active{
+            &::after{
+                transform: rotate(-135deg);
+            }
+        }
     }
     &__tab-content {
-        padding-bottom: -rem(20);
+        display: none;
     }
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
+        margin-bottom: -rem(5);
         @include adaptiv-font(14, 13);
         line-height: 1.6;
         font-weight: 400;
@@ -447,12 +456,6 @@ body {
             margin: 0px -rem(5) -rem(2) 0px;
         }
     }
-}
-.up {
-    transform: rotate(-135deg);
-}
-.down {
-    transform: rotate(45deg);
 }
 @media(max-width: 767px){
     .spec {
@@ -543,8 +546,14 @@ body {
         top: 0;
         left: 0;
         background-color: rgba(19, 18, 18, 0.568);
-        z-index: 2;
         display: flex;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.4s ease-in-out;
+        &.active{
+            opacity: 1;
+            z-index: 2;
+        }
         &-btn{
             position: fixed;
             right: 2%;
@@ -562,8 +571,8 @@ body {
         & img{
             align-self: center;
             margin: 0 auto;
-            max-width: 100vw;
-            max-height: 100vh;
+            max-width: 80vw;
+            max-height: 80vh;
         }
     }
 }
@@ -611,9 +620,6 @@ body {
             padding: 0px -rem(0);
         }
     }
-}
-.hidden{
-    display: none;
 }
 
 .qualification {
