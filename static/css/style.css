@@ -470,7 +470,7 @@ body {
 .spec__tab-title {
   color: #ffffff;
   font-size: calc(14px + 6 * ((100vw - 320px) / 960));
-  margin: 1.25rem 0px;
+  margin: 1.25rem 0px 1.25rem 0.625rem;
   width: 67vw;
   position: relative;
   font-weight: 400;
