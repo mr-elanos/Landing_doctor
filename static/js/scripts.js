@@ -39,7 +39,7 @@ educationModalBtns.forEach(btn =>{
 });
 
 //Spec block tabs
-$(document).ready(function(){
+$(function(){
     $('.spec__tab-title').click(function(e){
         $(this).toggleClass('active').next().slideToggle(300);
     });
