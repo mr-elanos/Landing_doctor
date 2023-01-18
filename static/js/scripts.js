@@ -1,41 +1,3 @@
-//Spec block tabs
-const educTabs = document.querySelectorAll('[data-spec-tab]');
-const educCards = document.querySelectorAll('[data-spec-tab-content]');
-educTabs.forEach(tab => {
-    tab.addEventListener('click', function(e){
-        educCards.forEach(card =>{
-            (card.id === tab.getAttribute('data-spec-tab')) ? card.classList.toggle('hidden') : card.classList.add('hidden');
-            if (card.classList.contains('hidden')){
-                card.previousElementSibling.firstElementChild.classList.remove('up');
-                card.previousElementSibling.firstElementChild.classList.add('down');
-            } else{
-                card.previousElementSibling.firstElementChild.classList.remove('down');
-                card.previousElementSibling.firstElementChild.classList.add('up');
-            }         
-        })
-    })
-});
-
-//Education block modals
-const educationModalBtns = document.querySelectorAll('[data-education-modal]');
-const educationModals = document.querySelectorAll('[data-education-modal-content]');
-const body = document.querySelector('body');
-educationModalBtns.forEach(btn =>{
-    btn.addEventListener('click', function(e){
-        educationModals.forEach(modal =>{
-            if (modal.id === btn.getAttribute('data-education-modal')) {
-                modal.classList.remove('hidden');
-                body.classList.add('scroll__hidden');
-                const closeBtn = modal.firstElementChild;
-                closeBtn.addEventListener('click', function(e){
-                    modal.classList.add('hidden')
-                    body.classList.remove('scroll__hidden');
-                })
-            };
-        })
-    })
-});
-
 //burger menu
 const menuBtn = document.querySelector('.header__burger-btn');
 let menu = document.querySelector('.header__burger-menu');
@@ -53,6 +15,35 @@ navBtns.forEach(btn =>{
     })
 })
 
+//Education block modals
+const educationModalBtns = document.querySelectorAll('[data-education-modal]');
+const educationModals = document.querySelectorAll('[data-education-modal-content]');
+const body = document.querySelector('body');
+educationModalBtns.forEach(btn =>{
+    btn.addEventListener('click', function(e){
+        educationModals.forEach(modal =>{
+            if (modal.id === btn.getAttribute('data-education-modal')) {
+                modal.classList.add('active');
+                const autoPadding = window.innerWidth - document.querySelector('.education').offsetWidth + 'px';
+                body.style.paddingRight = autoPadding;
+                body.classList.add('scroll__hidden');
+                const closeBtn = modal.firstElementChild;
+                closeBtn.addEventListener('click', function(e){
+                    modal.classList.remove('active')
+                    body.style.paddingRight = 0;
+                    body.classList.remove('scroll__hidden');
+                })
+            };
+        })
+    })
+});
+
+//Spec block tabs
+$(document).ready(function(){
+    $('.spec__tab-title').click(function(e){
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
+});
 
 //form no refresh for ajax
 const  formBtn = document.querySelector('.contacts__button');
