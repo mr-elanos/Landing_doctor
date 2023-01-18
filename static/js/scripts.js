@@ -1,19 +1,36 @@
 //burger menu
-const menuBtn = document.querySelector('.header__burger-btn');
-let menu = document.querySelector('.header__burger-menu');
-let navBtns = document.querySelectorAll('.burger__btn');
-menuBtn.addEventListener('click', function(){
-	menuBtn.classList.toggle('header__burger-btn-active');
-	menu.classList.toggle('header__burger-menu-active');
-    body.classList.toggle('scroll__hidden');
-})
-navBtns.forEach(btn =>{
-    btn.addEventListener('click', function(e){
-    menuBtn.classList.remove('header__burger-btn-active');
-	menu.classList.remove('header__burger-menu-active');
-    body.classList.remove('scroll__hidden');
-    })
-})
+$(function(){
+    $('.header__burger-btn').click(function(e){
+        $('.header__burger-btn').toggleClass('header__burger-btn-active');
+        $('.header__burger-menu').toggleClass('header__burger-menu-active');
+        $('body').toggleClass('scroll__hidden');
+    });
+    $('.burger__btn').each(function(){
+        $(this).click(function(){
+            $('.header__burger-btn').removeClass('header__burger-btn-active');
+            $('.header__burger-menu').removeClass('header__burger-menu-active');
+            $('body').removeClass('scroll__hidden');
+        });
+    });
+});
+
+//Spec block tabs
+$(function(){
+    $('.spec__tab-title').click(function(e){
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
+});
+
+//form no refresh for ajax
+$(function(){
+    $('.contacts__button').click(function(e){
+        e.preventDefault();
+        $('.contacts__left-success').addClass('active');
+        setTimeout(function(){
+            $('.contacts__left-success').removeClass('active');
+        }, 5000)
+    });
+});
 
 //Education block modals
 const educationModalBtns = document.querySelectorAll('[data-education-modal]');
@@ -38,19 +55,3 @@ educationModalBtns.forEach(btn =>{
     })
 });
 
-//Spec block tabs
-$(function(){
-    $('.spec__tab-title').click(function(e){
-        $(this).toggleClass('active').next().slideToggle(300);
-    });
-});
-
-//form no refresh for ajax
-const  formBtn = document.querySelector('.contacts__button');
-const formSuccess = document.querySelector('.contacts__left-success');
-formBtn.addEventListener('click', function(e){
-    formSuccess.classList.add('active');
-    setTimeout(function(){
-        formSuccess.classList.remove('active');
-    }, 5000)
-});
