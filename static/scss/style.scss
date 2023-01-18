@@ -442,7 +442,7 @@ body {
     &__tab-ul li{
         transition: all 2s;
         color: #ffffff;
-        margin-bottom: -rem(5);
+        margin-bottom: -rem(10);
         @include adaptiv-font(14, 13);
         line-height: 1.3;
         font-weight: 400;
