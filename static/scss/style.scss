@@ -197,22 +197,24 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        line-height: 1.5;
-        font-weight: 300;
-        text-align: center;
-        width: -rem(230);
-        border-radius: -rem(25);
-        padding: -rem(10);
-        margin: 10px auto;
-        background-color: #00627bfe;
-        transition: all 0.3s linear;
+        
         & a{
+            line-height: 1.5;
+            font-weight: 300;
+            text-align: center;
+            width: -rem(230);
+            border-radius: -rem(25);
+            padding: -rem(10);
+            margin: 10px auto;
+            background-color: #00627bfe;
+            transition: all 0.3s linear;
+            display:block;
             color: #ffffff;
-            @include adaptiv-font(16, 14)
-        }
-        &:hover{
-            cursor: pointer;
-            background-color: #00627b6e;
+            @include adaptiv-font(16, 14);
+            &:hover{
+                cursor: pointer;
+                background-color: #00627b6e;
+            }
         }
     }
 }

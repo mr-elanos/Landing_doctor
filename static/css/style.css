@@ -256,6 +256,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.header__button a {
   line-height: 1.5;
   font-weight: 300;
   text-align: center;
@@ -265,12 +267,11 @@ body {
   margin: 10px auto;
   background-color: rgba(0, 98, 123, 0.9960784314);
   transition: all 0.3s linear;
-}
-.header__button a {
+  display: block;
   color: #ffffff;
   font-size: calc(14px + 2 * ((100vw - 320px) / 960));
 }
-.header__button:hover {
+.header__button a:hover {
   cursor: pointer;
   background-color: rgba(0, 98, 123, 0.431372549);
 }
