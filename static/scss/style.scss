@@ -131,7 +131,9 @@ body {
         display: inline-block;
         &:hover{
             .header__dropdown-content{
-                display: block;
+                z-index: 1;
+                opacity: 1;
+                transform: translateY(0%);
             }
             .header__dropbtn {
                 transition: all 0.2s linear;
@@ -146,13 +148,16 @@ body {
         padding: -rem(12);
         @include adaptiv-font(14, 8);
         border: none;
+        z-index: 4;
 	}
 	&__dropdown-content {
-        display: none;
+        z-index: -1;
+        opacity: -1;
+        transform: translateY(-5%);
         position: absolute;
         background-color: #f1f1f1;
         box-shadow: 0px -rem(8) -rem(16) 0px rgba(0,0,0,0.2);
-        z-index: 1;
+        transition: opacity 0.6s linear, transform 0.3s linear;
         & a{
             color: #00627bc9;
             padding: -rem(12) -rem(12);
@@ -160,7 +165,7 @@ body {
             text-align: center;
             @include adaptiv-font(14, 8);
             display: block;
-            transition: all 0.2s linear;
+            transition: all 0.3s linear;
             &:hover{
                 background-color: #ddd;
             }
