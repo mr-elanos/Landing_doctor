@@ -1,7 +1,6 @@
 //Spec block tabs
 const educTabs = document.querySelectorAll('[data-spec-tab]');
 const educCards = document.querySelectorAll('[data-spec-tab-content]');
-
 educTabs.forEach(tab => {
     tab.addEventListener('click', function(e){
         educCards.forEach(card =>{
@@ -21,7 +20,6 @@ educTabs.forEach(tab => {
 const educationModalBtns = document.querySelectorAll('[data-education-modal]');
 const educationModals = document.querySelectorAll('[data-education-modal-content]');
 const body = document.querySelector('body');
-
 educationModalBtns.forEach(btn =>{
     btn.addEventListener('click', function(e){
         educationModals.forEach(modal =>{
@@ -42,7 +40,6 @@ educationModalBtns.forEach(btn =>{
 const menuBtn = document.querySelector('.header__burger-btn');
 let menu = document.querySelector('.header__burger-menu');
 let navBtns = document.querySelectorAll('.burger__btn');
-
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('header__burger-btn-active');
 	menu.classList.toggle('header__burger-menu-active');
@@ -57,12 +54,12 @@ navBtns.forEach(btn =>{
 })
 
 
+//form no refresh for ajax
 const  formBtn = document.querySelector('.contacts__button');
 const formSuccess = document.querySelector('.contacts__left-success');
-
 formBtn.addEventListener('click', function(e){
     formSuccess.classList.add('active');
     setTimeout(function(){
         formSuccess.classList.remove('active');
-    }, 7000)
+    }, 5000)
 });
