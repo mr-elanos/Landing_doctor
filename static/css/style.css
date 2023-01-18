@@ -467,7 +467,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5607843137);
   margin-bottom: 6.25rem;
 }
-.spec__tab-title {
+.spec__tab-title, .spec__tab-title.active {
   color: #ffffff;
   font-size: calc(14px + 6 * ((100vw - 320px) / 960));
   margin: 1.25rem 0px;
@@ -475,7 +475,7 @@ body {
   position: relative;
   font-weight: 400;
 }
-.spec__tab-title::after {
+.spec__tab-title::after, .spec__tab-title.active::after {
   content: "";
   border: solid #ffffff;
   border-width: 0 0.125rem 0.125rem 0;
@@ -487,13 +487,10 @@ body {
   transform: rotate(45deg);
   transition: all 0.2s linear;
 }
-.spec__tab-title:hover {
+.spec__tab-title:hover, .spec__tab-title.active:hover {
   cursor: pointer;
 }
-.spec__tab-title.active {
-  font-size: calc(14px + 6 * ((100vw - 320px) / 960));
-}
-.spec__tab-title.active::after {
+.spec__tab-title.active::after, .spec__tab-title.active.active::after {
   transform: rotate(-135deg);
 }
 .spec__tab-content {
@@ -518,7 +515,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .spec__tab-title {
+  .spec__tab-title, .spec__tab-title.active {
     width: 95vw;
   }
   .spec__tab:last-child::after {

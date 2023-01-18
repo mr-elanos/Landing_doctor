@@ -408,7 +408,7 @@ body {
             }
         }
     }
-    &__tab-title {
+    &__tab-title, &__tab-title.active {
         color: #ffffff;
         @include adaptiv-font(20, 14);
         margin: -rem(20) 0px;
@@ -431,7 +431,6 @@ body {
             cursor: pointer;
         }
         &.active{
-            @include adaptiv-font(20, 14);
             &::after{
                 transform: rotate(-135deg);
             }
@@ -460,7 +459,7 @@ body {
 }
 @media(max-width: 767px){
     .spec {
-        &__tab-title {
+        &__tab-title, &__tab-title.active {
             width: 95vw;
         }
         &__tab:last-child::after{
