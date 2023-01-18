@@ -470,7 +470,7 @@ body {
 .spec__tab-title {
   color: #ffffff;
   font-size: calc(14px + 6 * ((100vw - 320px) / 960));
-  margin: 1.25rem 0px 1.25rem 0.625rem;
+  margin: 1.25rem 0px;
   width: 67vw;
   position: relative;
   font-weight: 400;
@@ -489,6 +489,9 @@ body {
 }
 .spec__tab-title:hover {
   cursor: pointer;
+}
+.spec__tab-title.active {
+  font-size: calc(14px + 6 * ((100vw - 320px) / 960));
 }
 .spec__tab-title.active::after {
   transform: rotate(-135deg);
