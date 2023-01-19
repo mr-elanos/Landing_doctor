@@ -11,4 +11,4 @@ Landing page for psychiatrist. In this project:
 - semantic tags
 - green zone google PageSpeed.
 
-https://mr-elanos.github.io/Lending_doctor/
+https://mr-elanos.github.io/Landing_doctor/
