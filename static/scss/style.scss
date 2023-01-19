@@ -367,14 +367,26 @@ body {
         }
     }
 }
-@media (max-width: 590px){
-    .header {
-        height: 1380px;
+@media (max-height: 590px){
+    .header{
         &__block{
+            align-items: flex-start;
             padding-top: 0px;
+        }
+        &__text{
+            margin-bottom: 10px;
+        }
+        &__subtitle{
+            margin-bottom: 10px;
         }
     }
 }
+@media (max-width: 590px) {
+    .header {
+        height: 1350px;
+    }
+}
+
 
 .spec {
     display: flex;

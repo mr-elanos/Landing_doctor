@@ -427,12 +427,21 @@ body {
     padding-bottom: 20px;
   }
 }
+@media (max-height: 590px) {
+  .header__block {
+    align-items: flex-start;
+    padding-top: 0px;
+  }
+  .header__text {
+    margin-bottom: 10px;
+  }
+  .header__subtitle {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 590px) {
   .header {
-    height: 1380px;
-  }
-  .header__block {
-    padding-top: 0px;
+    height: 1350px;
   }
 }
 .spec {
