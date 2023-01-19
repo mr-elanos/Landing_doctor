@@ -607,15 +607,18 @@ body {
             background-color: #0878947c;
             }
         }
-        & img{
+        & picture{
             align-self: center;
             margin: 0 auto;
-            width: -rem(700);
-            height: -rem(500);
-        }
-        & .vertical{
-            width: -rem(400);
-            height: -rem(600);
+            & img {
+                width: -rem(700);
+                height: -rem(500);
+                
+            }
+            & .vertical{
+                width: -rem(400);
+                height: -rem(600);
+            }
         }
     }
 }
@@ -623,11 +626,11 @@ body {
 @media(max-width: 767px){
     .education {
         &__img {
-            & img {
+            & picture img {
             width: -rem(360);
             height: -rem(200);
             }
-            & .vertical{
+            & picture .vertical{
                 width: -rem(310);
                 height: -rem(500);
             }
@@ -665,7 +668,7 @@ body {
 }
 @media(max-width: 380px){
     .education {
-        &__img img{
+        &__img picture img{
             width: -rem(320);
             height: -rem(200);
         }

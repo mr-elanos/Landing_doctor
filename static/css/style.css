@@ -657,23 +657,25 @@ body {
   cursor: pointer;
   background-color: rgba(8, 120, 148, 0.4862745098);
 }
-.education__img img {
+.education__img picture {
   align-self: center;
   margin: 0 auto;
+}
+.education__img picture img {
   width: 43.75rem;
   height: 31.25rem;
 }
-.education__img .vertical {
+.education__img picture .vertical {
   width: 25rem;
   height: 37.5rem;
 }
 
 @media (max-width: 767px) {
-  .education__img img {
+  .education__img picture img {
     width: 22.5rem;
     height: 12.5rem;
   }
-  .education__img .vertical {
+  .education__img picture .vertical {
     width: 19.375rem;
     height: 31.25rem;
   }
@@ -709,7 +711,7 @@ body {
   }
 }
 @media (max-width: 380px) {
-  .education__img img {
+  .education__img picture img {
     width: 20rem;
     height: 12.5rem;
   }
