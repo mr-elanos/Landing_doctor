@@ -8,3 +8,5 @@ Lending page for psychiatrist. In this project:
 - responsive design;
 - optimized images;
 - green zone google PageSpeed.
+
+mr-elanos.github.io/Lending_doctor/
