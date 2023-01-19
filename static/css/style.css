@@ -651,11 +651,23 @@ body {
 .education__img img {
   align-self: center;
   margin: 0 auto;
-  max-width: 80vw;
-  max-height: 80vh;
+  width: 43.75rem;
+  height: 31.25rem;
+}
+.education__img .vertical {
+  width: 25rem;
+  height: 37.5rem;
 }
 
 @media (max-width: 767px) {
+  .education__img img {
+    width: 22.5rem;
+    height: 12.5rem;
+  }
+  .education__img .vertical {
+    width: 19.375rem;
+    height: 31.25rem;
+  }
   .education::after {
     margin-top: 0px;
   }
@@ -688,6 +700,10 @@ body {
   }
 }
 @media (max-width: 380px) {
+  .education__img img {
+    width: 20rem;
+    height: 12.5rem;
+  }
   .education::after {
     margin-top: 0px;
   }

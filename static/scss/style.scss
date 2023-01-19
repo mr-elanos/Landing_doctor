@@ -598,13 +598,28 @@ body {
         & img{
             align-self: center;
             margin: 0 auto;
-            max-width: 80vw;
-            max-height: 80vh;
+            width: -rem(700);
+            height: -rem(500);
+        }
+        & .vertical{
+            width: -rem(400);
+            height: -rem(600);
         }
     }
 }
+
 @media(max-width: 767px){
     .education {
+        &__img {
+            & img {
+            width: -rem(360);
+            height: -rem(200);
+            }
+            & .vertical{
+                width: -rem(310);
+                height: -rem(500);
+            }
+        }
         &::after{
             margin-top: 0px;
         }
@@ -638,6 +653,10 @@ body {
 }
 @media(max-width: 380px){
     .education {
+        &__img img{
+            width: -rem(320);
+            height: -rem(200);
+        }
         &::after{
             margin-top: 0px;
         }
