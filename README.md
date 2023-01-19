@@ -9,4 +9,4 @@ Lending page for psychiatrist. In this project:
 - optimized images;
 - green zone google PageSpeed.
 
-
+https://mr-elanos.github.io/Lending_doctor/
