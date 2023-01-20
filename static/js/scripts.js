@@ -1,3 +1,9 @@
+//Preloader
+$(function() {
+    $(".preloader").removeClass('active');
+    $("body").removeClass('scroll__hidden');
+});
+
 //burger menu
 $(function(){
     $('.header__burger-btn').click(function(e){

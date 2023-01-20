@@ -70,6 +70,41 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+/*Анимация прелофдер*/
+@-webkit-keyframes loader {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  20%, 25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+  45%, 50% {
+    transform: scale(1) rotate(180deg);
+  }
+  70%, 75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+  95%, 100% {
+    transform: scale(1) rotate(360deg);
+  }
+}
 /*Миксин для адаптации шрифтов*/
 /*Функция для адаптации под широкие экраны*/
 /*Шрифт по-умолчанию под большие экраны(адаптация блоков через rem)*/
@@ -122,6 +157,52 @@ body {
 }
 .scroll__hidden {
   overflow: hidden;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #60a5b7;
+  z-index: -2;
+  opacity: -1;
+  transition: all 0.4s linear;
+}
+.preloader__loader {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  -webkit-animation: loader 2s linear infinite;
+          animation: loader 2s linear infinite;
+}
+.preloader__loader .circle {
+  --color: #333;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+.preloader__loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.preloader__loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.preloader__loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+.preloader__loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
 }
 
 .header {
