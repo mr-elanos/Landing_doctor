@@ -803,7 +803,7 @@ body {
     grid-template-columns: auto 1fr;
     -moz-column-gap: 0rem;
          column-gap: 0rem;
-    padding: 0px 0rem;
+    padding: 0px 0.3125rem;
   }
 }
 .qualification {

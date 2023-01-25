@@ -742,7 +742,7 @@ body {
         &__content-item{
             grid-template-columns: auto 1fr;
             column-gap: -rem(0);
-            padding: 0px -rem(0);
+            padding: 0px -rem(5);
         }
     }
 }
