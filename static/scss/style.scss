@@ -1,6 +1,6 @@
 @import 'null_style.scss';
 
-/*Анимация прелофдер*/
+/*Анимация прелоaдер*/
 @keyframes loader {
     0% {
         transform: scale(1) rotate(0);
@@ -74,6 +74,8 @@ body {
     font-weight: 500;
     text-align: center;
     padding: -rem(60) -rem(10) -rem(50);
+    opacity: 0;
+    transition: all 0.7s ease;
 }
 @media(max-width: 767px){
     .title{
@@ -457,6 +459,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #00627bc9;
+    
     &__title{
         color: white;
         max-width: -rem(700);
@@ -576,6 +579,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: -rem(50);
+    overflow: hidden;
     &::after{
         content: '';
         width: 77%;
@@ -621,15 +625,22 @@ body {
         color: #ffffff;
         font-weight: 400;
         @include adaptiv-font(16, 12);
+        opacity: 0;
+        transition: opacity 0.7s ease;
     }
     &__content-text-1, &__content-text-3, &__content-text-5 {
         grid-column-start: 3;
         grid-column-end: 4;
-        
+        opacity: 0;
+        transform: translate(80%, 0);
+        transition: all 0.6s linear;
     }
     &__content-text-2, &__content-text-4, &__content-text-6 {
         grid-column-start: 1;
         grid-column-end: 2; 
+        opacity: 0;
+        transform: translate(-80%, 0);
+        transition: all 0.6s linear;
     }
     &__content-text {
         text-align: center;
@@ -757,9 +768,15 @@ body {
     &__content-left {
         width: 48%;
         margin-bottom: -rem(30);
+        opacity: 0;
+        transform: translate(0, -30%);
+        transition: all 0.5s ease-out;
     }
     &__content-right {
         width: 48%;
+        opacity: 0;
+        transform: translate(0, -30%);
+        transition: all 0.5s ease-out;
     }
     &__title{
         @include adaptiv-font(22, 16);
@@ -807,6 +824,16 @@ body {
         gap: -rem(20);
         margin: 0px -rem(10); 
         padding-bottom: -rem(100);
+        overflow: hidden;
+        & div:nth-child(1){
+            transition: all 0.5s linear 0s;
+        }
+        & div:nth-child(2){
+            transition: all 0.5s linear 0.1s;
+        }
+        & div:nth-child(3){
+            transition: all 0.5s linear 0.2s;
+        }
     }
     &__card {
         display: flex;
@@ -815,6 +842,9 @@ body {
         background-color: #ffffff;
         border-radius: 4%;
         box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+        
     }
     &__card-img {
         margin: -rem(30) 0px -rem(40);
@@ -875,6 +905,8 @@ body {
         color: #00627bc9;
     }
     &__step{
+        opacity: 0;
+        transform: scale(0.5, 0.5);
         &-left{
             display:flex;
             justify-content:flex-start;
@@ -889,7 +921,6 @@ body {
         max-height: -rem(70);
         align-self: flex-end;
         justify-self: flex-end;
-        opacity: 0.7;
         & img{
             width: 100%;
             height: 100%;
@@ -1038,6 +1069,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        
     }
     &__content{
         display: flex;
@@ -1255,3 +1287,10 @@ body {
     }
 }
 
+.show{
+    opacity: 1;
+    transform: translate(0, 0);
+    transform: scale(1, 1);
+    transition: all 0.5s linear;
+    transform: skew(0deg, 0deg);
+}

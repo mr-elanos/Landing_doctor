@@ -61,3 +61,26 @@ educationModalBtns.forEach(btn =>{
     })
 });
 
+
+//flying blocks
+function anim(title) {
+    title.forEach(change => {
+        if (change.isIntersecting) {
+        change.target.classList.add('show');
+        }
+    });
+}
+
+let observer = new IntersectionObserver(anim,{ threshold: [0.5] });
+let observerQuick = new IntersectionObserver(anim, { threshold: [0.01] });
+
+
+let blocks = document.querySelectorAll('.anim');
+for (let block of blocks) {
+    observer.observe(block);
+}
+
+let blocksQuick = document.querySelectorAll('.anim-quick');
+for (let block of blocksQuick) {
+    observerQuick.observe(block);
+}
