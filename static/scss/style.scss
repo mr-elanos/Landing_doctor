@@ -773,14 +773,13 @@ body {
         width: 48%;
         margin-bottom: -rem(30);
         opacity: 0;
+        z-index: 1;
         transform: translate(0, -30%);
-        transition: all 0.5s ease-out;
     }
     &__content-right {
         width: 48%;
         opacity: 0;
         transform: translate(0, -30%);
-        transition: all 0.5s ease-out;
     }
     &__title{
         @include adaptiv-font(22, 16);
