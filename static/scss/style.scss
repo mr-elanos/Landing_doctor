@@ -632,21 +632,24 @@ body {
         grid-column-start: 3;
         grid-column-end: 4;
         opacity: 0;
-        transform: translate(80%, 0);
+        transform: translate(10vw, 0);
         transition: all 0.6s linear;
+        overflow: hidden;
     }
     &__content-text-2, &__content-text-4, &__content-text-6 {
         grid-column-start: 1;
         grid-column-end: 2; 
         opacity: 0;
-        transform: translate(-80%, 0);
+        transform: translate(-10vw, 0);
         transition: all 0.6s linear;
+        
     }
     &__content-text {
         text-align: center;
         @include adaptiv-font(16, 14);
         font-weight: 300;
         transition: all 0.1s linear;
+        overflow: hidden;
         &:hover{
             cursor: pointer;
             color: #25a1c0c9;
@@ -727,6 +730,7 @@ body {
         &__content-text-1, &__content-text-3, &__content-text-5, &__content-text-2, &__content-text-4, &__content-text-6 {
             grid-column-start: 2;
             grid-column-end: 3;
+            transform: translate(10vw, 0);
         }
         &__content-text-1, &__content-text-3, &__content-text-5{
             grid-row-start: 1;

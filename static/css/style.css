@@ -698,14 +698,15 @@ body {
   grid-column-start: 3;
   grid-column-end: 4;
   opacity: 0;
-  transform: translate(80%, 0);
+  transform: translate(10vw, 0);
   transition: all 0.6s linear;
+  overflow: hidden;
 }
 .education__content-text-2, .education__content-text-4, .education__content-text-6 {
   grid-column-start: 1;
   grid-column-end: 2;
   opacity: 0;
-  transform: translate(-80%, 0);
+  transform: translate(-10vw, 0);
   transition: all 0.6s linear;
 }
 .education__content-text {
@@ -713,6 +714,7 @@ body {
   font-size: calc(14px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   transition: all 0.1s linear;
+  overflow: hidden;
 }
 .education__content-text:hover {
   cursor: pointer;
@@ -789,6 +791,7 @@ body {
   .education__content-text-1, .education__content-text-3, .education__content-text-5, .education__content-text-2, .education__content-text-4, .education__content-text-6 {
     grid-column-start: 2;
     grid-column-end: 3;
+    transform: translate(10vw, 0);
   }
   .education__content-text-1, .education__content-text-3, .education__content-text-5 {
     grid-row-start: 1;
